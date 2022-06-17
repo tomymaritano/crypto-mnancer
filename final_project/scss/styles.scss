@@ -13,7 +13,7 @@ $pink: #FA7C91;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
-$mnancer: #1FC5C9;
+$mnancer: #F2C335;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
@@ -55,21 +55,11 @@ $navbar-dropdown-arrow: $grey;
 #h1 {
     display: flex;
     align-items: center;
-}
-
-#input-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#input-button input {
-    width: 75%;
-}
+};
 
 .is-mnancer {
     background-color: $mnancer;
-}
+};
 
 .popular-cryptocurrencies {
     background-color: white;
@@ -117,3 +107,4 @@ $navbar-dropdown-arrow: $grey;
 #navbar {
     font-size: 0.8rem;
 };
+

@@ -11172,7 +11172,7 @@ a.navbar-item,
   .navbar-link:hover,
   .navbar-link.is-active {
     background-color: #fafafa;
-    color: #1FC5C9; }
+    color: #F2C335; }
 
 .navbar-item {
   flex-grow: 0;
@@ -14130,16 +14130,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   display: flex;
   align-items: center; }
 
-#input-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-#input-button input {
-  width: 75%; }
-
 .is-mnancer {
-  background-color: #1FC5C9; }
+  background-color: #F2C335; }
 
 .popular-cryptocurrencies {
   background-color: white; }
