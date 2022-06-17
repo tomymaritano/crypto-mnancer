@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Set your brand colors
+$black: #000000;
+$grey: rgb(85, 85, 85);
 $purple: #8A4D76;
 $pink: #FA7C91;
 $brown: #757763;
@@ -27,6 +29,13 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+//Navbar
+$navbar-item-color: $black;
+$navbar-item-hover-color: $mnancer;
+
+//Navbar dropdown
+$navbar-dropdown-arrow: $grey;
+
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
@@ -37,6 +46,7 @@ $input-shadow: none;
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
 
 #h1 {
     display: flex;
@@ -57,4 +67,21 @@ $input-shadow: none;
 
 .is-mnancer {
     background-color: $mnancer;
+}
+
+.popular-cryptocurrencies {
+    background-color: white;
+}
+
+.popular {
+    display: flex;
+    width: 100%;
+    height:6rem;
+    justify-items: center;
+    align-items:baseline;
+    justify-content: space-between;
+}
+
+.popular-crypto {
+    margin: 3rem;
 }
