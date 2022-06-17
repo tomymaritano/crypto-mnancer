@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="has-navbar-fixed-top" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Build, sell and Altcoins Cryptocurrencies Exchange</title>
+    <title>Buy/Sell Bitcoin, Ether and Altcoins Cryptocurrencies Exchange</title>
     <link rel="stylesheet" href="css/mystyles.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav id="navbar" class="navbar is-fixed-top is-transparent has-shadow" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
             <img src="img/logo.png" width="116" height="36">
@@ -78,14 +78,25 @@
             <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                <a class="button is-mnancer">
+                <a class="button is-small is-mnancer">
                     <strong>Sign up</strong>
                 </a>
-                <a class="button">
+                <a class="button is-small">
                     Log in
                 </a>
                 <hr>
                 </div>
+            </div>
+            <div class="navbar-item">
+                <a class="navbar-item">
+                    English
+                </a>
+                <a class="navbar-item">
+                    USD
+                </a>
+                <a class="navbar-item">
+                    <i class="fa-solid fa-moon"></i>
+                </a>
             </div>
             </div>
         </div>  
@@ -96,7 +107,7 @@
             <div class="columns is-centered">
                 <div id="h1" class="column">
                     <div class="content">
-                        <h1 class="title is-1"><strong>Buy, trade and hold 600+ criptocurrencies on Mnancer</strong></h1>
+                        <h1 class="title is-mobile is-1"><strong>Buy, trade and hold 600+ criptocurrencies on Mnancer</strong></h1>
                         <div id="input-button" class="control">
                             <input class="input" type="text" placeholder="Email / phone number">
                             <button class="button is-mnancer">Get started</button>
@@ -107,6 +118,7 @@
                     <img src="img/foreground-image-light.png" alt="Cryptocurrencies ">
                 </div>
             </div>
+            
             <!--Users-->
             <div class="container">
                 <nav class="level is-mobile">
@@ -146,14 +158,212 @@
         </div>
             <div class="container popular-crypto">
                 <div class="columns">
-                    <div class="column">Name</div>
-                    <div class="column">Last price</div>                        
-                    <div class="column">24hs Change</div>
-                    <div class="column">Market Cap</div>
+                    <div class="column"><p>Name</p></div>
+                    <div class="column"><p>Last price</p></div>                        
+                    <div class="column"><p>24hs Change</p></div>
+                    <div class="column"><p>Market Cap</p></div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <img src="img/icons/btc.svg" alt="Bitcoin">
+                            </span>
+                            <span>Bitcoin</span>
+                        </span>
+                    </div>
+                    <div class="column">
+                        <div class="btc-value">
+                            1900
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="btc-last-price">
+                            -0.5%
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="btc-mkt-capital">
+                            $35.000M
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <img src="img/icons/eth.svg" alt="Etherum">
+                            </span>
+                            <span>Etherum</span>
+                        </span>
+                    </div>
+                    <div class="column">
+                        <div class="eth-value">
+                            1900
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="eth-last-price">
+                            -0.5%
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="eth-mkt-capital">
+                            $35.000M
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <img src="img/icons/ada.svg" alt="ADA">
+                            </span>
+                            <span>ADA</span>
+                        </span>
+                    </div>
+                    <div class="column">
+                        <div class="ada-value">
+                            1900
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ada-last-price">
+                            -0.5%
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ada-mkt-capital">
+                            $35.000M
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <img src="img/icons/ark.svg" alt="ark">
+                            </span>
+                            <span>ARK</span>
+                        </span>
+                    </div>
+                    <div class="column">
+                        <div class="ark-value">
+                            1900
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ark-last-price">
+                            -0.5%
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ark-mkt-capital">
+                            $35.000M
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <img src="img/icons/ltc.svg" alt="litecoin">
+                            </span>
+                            <span>LiteCoin</span>
+                        </span>
+                    </div>
+                    <div class="column">
+                        <div class="btc-value">
+                            1900
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="btc-last-price">
+                            -0.5%
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="mkt-capital">
+                            $35.000M
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-4">Sign Up now to build your own portfolio for free!</h2>
+            <button class="button is-mnancer">Sign Up</button>
+        </div>
+    </section>
+    <section class="section build-crypto">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-2">Build your crypto portfolio</h1>
+                    <h2 class="subtitle">Start your first trade with these easy steps</h2>
+                    <div class="columns">
+                        <div class="column build-crypto-column">
+                            <article class="media">
+                                <figure class="media-left">
+                                    <p class="image is-64x64">
+                                    <img src="img/cryptocurrencies.png">
+                                    </p>
+                                </figure>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <h2 class="subtitle is-4">Fund your account</h2>
+                                    <p>
+                                        Add funds to your crypto account to start trading crypto. You can add funds with a variety of payment methods.
+                                    </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="media">
+                                <figure class="media-left">
+                                    <p class="image is-64x64">
+                                    <img src="img/bitcoin-wallet.png">
+                                    </p>
+                                </figure>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <h2 class="subtitle is-4">Verify your identity</h2>
+                                    <p>
+                                        Complete the identity verification process to secure your account and transactions.
+                                    </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="media">
+                                <figure class="media-left">
+                                    <p class="image is-64x64">
+                                    <img src="img/startup.png">
+                                    </p>
+                                </figure>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <h2 class="subtitle is-4">Start trading</h2>
+                                    <p>
+                                        You're good to go! Buy/sell crypto, set up recurring buys for your investments, and discover what Binance has to offer.
+                                    </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <button class="button is-small is-mnancer">Get started</button>
+                    </div>
+                </div>
+                <div class="column portfolio-column">
+                    <img src="img/portfolio-section.png" alt="portfolio" width="300" height="400">
                 </div>
             </div>
         </div>
     </section>
   </body>
   <script src="navbar.js"></script>
+  <script src="https://kit.fontawesome.com/5ac9c25f76.js" crossorigin="anonymous"></script>
 </html>

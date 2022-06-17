@@ -4,6 +4,7 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
+
 // Set your brand colors
 $black: #000000;
 $grey: rgb(85, 85, 85);
@@ -39,6 +40,7 @@ $navbar-dropdown-arrow: $grey;
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
 @import "../node_modules/bulma/sass/elements/button.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
@@ -47,6 +49,8 @@ $navbar-dropdown-arrow: $grey;
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
 @import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
 
 #h1 {
     display: flex;
@@ -54,8 +58,6 @@ $navbar-dropdown-arrow: $grey;
 }
 
 #input-button {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -75,13 +77,43 @@ $navbar-dropdown-arrow: $grey;
 
 .popular {
     display: flex;
-    width: 100%;
-    height:6rem;
     justify-items: center;
     align-items:baseline;
     justify-content: space-between;
-}
+};
 
 .popular-crypto {
-    margin: 3rem;
+    margin-top: 3rem;
+};
+
+.popular-crypto p {
+    font-size: 0.8rem;
+    color: grey;
 }
+
+.popular-crypto .columns:hover {
+    background-color: #e9e9e957;
+};
+
+.build-crypto {
+    background: white;
+};
+
+.build-crypto-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+};
+
+.build-crypto button {
+    margin-top: 2rem;
+}
+
+.portfolio-column {
+    display: flex;
+    justify-content: center;
+}
+#navbar {
+    font-size: 0.8rem;
+};
