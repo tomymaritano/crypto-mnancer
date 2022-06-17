@@ -51,6 +51,7 @@ $navbar-dropdown-arrow: $grey;
 @import "../node_modules/bulma/sass/elements/table.sass";
 @import "../node_modules/bulma/sass/helpers/_all.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/components/level.sass";
 
 #h1 {
     display: flex;
@@ -70,10 +71,6 @@ $navbar-dropdown-arrow: $grey;
     justify-items: center;
     align-items:baseline;
     justify-content: space-between;
-};
-
-.popular-crypto {
-    margin-top: 3rem;
 };
 
 .popular-crypto p {
@@ -108,3 +105,13 @@ $navbar-dropdown-arrow: $grey;
     font-size: 0.8rem;
 };
 
+@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+  .custom-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
+
+.explore-section {
+    background-color: white;
+}
