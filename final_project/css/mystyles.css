@@ -14246,3 +14246,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .explore-section {
   background-color: white; }
+
+.mnancer-cards .column .card:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.45);
+  box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.45); }
+
+.mnancer-cards .card {
+  height: 100%; }
