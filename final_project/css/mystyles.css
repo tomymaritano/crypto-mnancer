@@ -8192,7 +8192,7 @@ body {
   line-height: 1.5; }
 
 a {
-  color: #FA7C91;
+  color: #464646;
   cursor: pointer;
   text-decoration: none; }
   a strong {
@@ -11110,7 +11110,7 @@ body.has-navbar-fixed-bottom {
   overflow-y: hidden; }
 
 .navbar-burger {
-  color: #4a4a4a;
+  color: #F2C335;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -11206,7 +11206,7 @@ a.navbar-item,
 .navbar-link:not(.is-arrowless) {
   padding-right: 2.5em; }
   .navbar-link:not(.is-arrowless)::after {
-    border-color: #555555;
+    border-color: #464646;
     margin-top: -0.375em;
     right: 1.125em; }
 

@@ -7,9 +7,8 @@
 
 // Set your brand colors
 $black: #000000;
-$grey: rgb(85, 85, 85);
+$grey: rgb(70, 70, 70);
 $purple: #8A4D76;
-$pink: #FA7C91;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
@@ -20,7 +19,7 @@ $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
-$link: $pink;
+$link: $grey;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -36,6 +35,7 @@ $navbar-item-hover-color: $mnancer;
 
 //Navbar dropdown
 $navbar-dropdown-arrow: $grey;
+$navbar-burger-color: $mnancer;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
