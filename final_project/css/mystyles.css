@@ -14253,3 +14253,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .mnancer-cards .card {
   height: 100%; }
+
+.trusted-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.trusted-crypto-exchange {
+  background-color: white; }
