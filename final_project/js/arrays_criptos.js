@@ -1,13 +1,28 @@
 const cryptocurrencie = [
 {
-    name: bitcoin,
+    name: 'Bitcoin',
     id: 1,
     value: 250,
 },
 {
-    name: etherum,
+    name: 'Etherum',
     id: 2,
     value: 140,
+},
+{
+    name: 'XPR',
+    id: 3,
+    value: 0.3,
+},
+{
+    name: 'Link',
+    id: 4,
+    value: 6.8,
+},
+{
+    name: 'LTC',
+    id: 5,
+    value: 52,
 }
 ];
 
