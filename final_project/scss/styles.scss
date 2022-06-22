@@ -48,6 +48,7 @@ $navbar-burger-color: $mnancer;
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/elements/table.sass";
 @import "../node_modules/bulma/sass/helpers/_all.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
@@ -73,16 +74,6 @@ $navbar-burger-color: $mnancer;
     background-color: $mnancer;
 };
 
-.popular-cryptocurrencies {
-    background-color: white;
-}
-
-.popular {
-    display: flex;
-    justify-items: center;
-    align-items:baseline;
-    justify-content: space-between;
-};
 
 .popular-crypto p {
     font-size: 0.8rem;
