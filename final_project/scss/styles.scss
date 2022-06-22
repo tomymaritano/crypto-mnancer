@@ -126,8 +126,17 @@ $navbar-burger-color: $mnancer;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+};
 
 .trusted-crypto-exchange {
     background-color: white;
+};
+
+.need-help {
+    background-color: white;
+};
+
+.footer-social-list {
+    display: flex;
+    justify-content: space-around;
 }
