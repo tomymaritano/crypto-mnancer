@@ -7972,3 +7972,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .border-bottom:hover {
   background: rgba(235, 233, 233, 0.222); }
+
+.span-bank-cards {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5rem; }

@@ -168,3 +168,9 @@ $navbar-burger-color: $mnancer;
 .border-bottom:hover {
         background: rgba(235, 233, 233, 0.222);
 };
+
+.span-bank-cards {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5rem;
+}

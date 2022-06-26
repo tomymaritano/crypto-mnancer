@@ -76,7 +76,7 @@
           </div>
           <div class="navbar-item">
             <a class="navbar-item"> English </a>
-            <a class="navbar-item"> USD </a>
+            <a id="dolar" class="navbar-item"> USD </a>
             <a class="navbar-item">
               <i class="fa-solid fa-moon"></i>
             </a>
@@ -92,24 +92,36 @@
         <h2 class="subtitle is-4">Deposit Fiat</h2>
       </div>
     </section>
-    <section class="section">
-      <div class="container is-fluid mt-6">
-        <div class="columns m-6 is-mobile">
+    <section class="section is-fullwidth is-mobile">
+      <div class="container mt-6">
+        <div class="columns m-6">
           <div class="column is-two-fifths">
             <div class="content">
               <h2 class="subtitle is-5">1. Select Currency</h2>
             </div>
-            <div class="field is-size-7">Currency</div>
+            <form id="form" class="form">
+             <div id="currency" class="field is-size-7">Currency</div>
             <div class="control">
-              <div class="select is-fullwidth is-small">
-                <select>
-                  <option>Select</option>
-                  <option>With options</option>
-                  <option>Select</option>
-                  <option>With options</option>
-                  <option>Select</option>
-                  <option>With options</option>
+              <!-- <div id="selectCurrency" class="select is-small">
+                <select id="selected-currency" onchange="getCur()">
+                  <option value="dolar">Dolar</option>
+                  <option value="euro">Euro</option>
+                  <option value="pound">Pound sterling</option>
+                  <option value="turkish">Turkish Lira</option>
+                  <option value="real">Brazilian Real</option>
                 </select>
+              </div> -->
+              <div id="select-crypto" class="select is-fullwidth is-small">
+                <select id="selectedCrypto">
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="LiteCoin">LiteCoin</option>
+                  <option value="Etherum">Etherum</option>
+                  <option value="ADA">ADA</option>
+                </select>
+              </div>
+              <div class="field is-size-7 mt-4">Ammount</div>
+              <div class="control">
+                <input id="ammount" placeholder="ammount" class="input is-small" type="text" />
               </div>
               <div class="control mt-5">
                 <h2 class="subtitle is-7">Deposit with</h2>
@@ -120,7 +132,7 @@
                 </button>
                 <button class="button is-small is-active">Other methods</button>
               </div>
-              <div class="control is-size-7 mt-4">
+              <div class="control is-mobile is-fullwidth is-size-7 mt-4">
                 <label class="radio">
                   <input type="radio" name="foobar" />
                 </label>
@@ -130,6 +142,9 @@
                   </span>
                   <span class="has-text-weight-bold">Bank Transfer (SEPA)</span>
                 </span>
+                <span class="span-bank-cards"
+                  >1 Euro discounted transaction fee</span
+                >
               </div>
               <div class="control is-size-7 mt-4">
                 <label class="radio">
@@ -143,14 +158,16 @@
                     >Bank Card (VISA / MC )</span
                   >
                 </span>
+                <span class="span-bank-cards"
+                  >1.8% Euro discounted transaction fee</span
+                >
               </div>
             </div>
+            <div class="control is-fullwidth mt-5">
+                <button type="submit" class="button is-warning is-small is-fullwidth">Buy</button>
+            </div>
           </div>
-          <div
-            class="column is-flex is-justify-content-end is-align-content-end is-hidden-mobile"
-          >
-            asdad
-          </div>
+            </form>
         </div>
       </div>
     </section>

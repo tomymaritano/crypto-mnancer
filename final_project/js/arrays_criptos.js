@@ -2,12 +2,12 @@ const cryptocurrencie = [
 {
     name: 'Bitcoin',
     id: 1,
-    value: 250,
+    value: 19250,
 },
 {
     name: 'Etherum',
     id: 2,
-    value: 140,
+    value: 1400,
 },
 {
     name: 'XPR',
@@ -25,6 +25,9 @@ const cryptocurrencie = [
     value: 52,
 }
 ];
+
+
+
 
 class Cryptos {
     constructor (name , id, value) {
