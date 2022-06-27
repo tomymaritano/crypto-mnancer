@@ -2,8 +2,8 @@
 
 ## PROJECT - CRYPTO SIMULATOR
 
-### Framework - Bulma
-[website](https://bulma.io)
+### Framework - Bulma [Bulma.io](https://bulma.io)
+
 
 #### FrameworkUsage
 
