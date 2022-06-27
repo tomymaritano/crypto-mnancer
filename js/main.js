@@ -1,4 +1,4 @@
-
+//BUYCRYPTO 
 window.onload = () => {
   const form = document.getElementById("form");
   form.onsubmit = (e) => {
@@ -14,26 +14,24 @@ window.onload = () => {
 
       const cryptoCategory = () => {
         const selectCrypto = document.getElementById("selectedCrypto");
-        const selectedCrypto =
-          selectCrypto.options[selectCrypto.selectedIndex].value;
+        const selectedCrypto = selectCrypto.options[selectCrypto.selectedIndex].value;
         // console.log(selectedCrypto);
 
         //ENGINE
         const engine = () => {
           for (const cryptos of cryptocurrencie) {
             if (cryptos.name === selectedCrypto) {
-              const mainFunction = cryptocurrencie.find(
-                (element) => element.name
-              );
+              const mainFunction = cryptocurrencie.find((element) => element.name === selectedCrypto);
+              console.log(mainFunction)
+
               let mainFunctionResult;
               mainFunctionResult = mainFunction.value;
-              console.log(mainFunctionResult);
+              // console.log(mainFunctionResult);
               const mainResult = valueAmmount / mainFunctionResult;
-              console.log(
-                "Compraste un total de" + " " + mainResult + " " + cryptos.name
-              );
-            }
-          }
+              console.log(mainResult)
+              console.log("Compraste un total de" + " " + mainResult + " " + cryptos.name);
+            };
+          };
         };
         engine();
       };

@@ -40,5 +40,6 @@ class Cryptos {
 cryptocurrencie.push(new Cryptos("EOS", 3, 30));
 cryptocurrencie.push(new Cryptos("XPR", 4, 25));
 
+
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);
