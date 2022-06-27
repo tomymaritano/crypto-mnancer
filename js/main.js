@@ -22,7 +22,7 @@ window.onload = () => {
           for (const cryptos of cryptocurrencie) {
             if (cryptos.name === selectedCrypto) {
               const mainFunction = cryptocurrencie.find((element) => element.name === selectedCrypto);
-              console.log(mainFunction)
+              // console.log(mainFunction)
 
               let mainFunctionResult;
               mainFunctionResult = mainFunction.value;
@@ -30,6 +30,7 @@ window.onload = () => {
               const mainResult = valueAmmount / mainFunctionResult;
               console.log(mainResult)
               console.log("Compraste un total de" + " " + mainResult + " " + cryptos.name);
+
             };
           };
         };

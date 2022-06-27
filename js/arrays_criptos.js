@@ -1,4 +1,4 @@
-//Array
+ //Array
 const cryptocurrencie = [
   {
     name: "Bitcoin",
@@ -28,7 +28,6 @@ const cryptocurrencie = [
 ];
 
 //Constructor
-
 class Cryptos {
   constructor(name, id, value) {
     this.name = name;
@@ -37,9 +36,25 @@ class Cryptos {
   }
 }
 
-cryptocurrencie.push(new Cryptos("EOS", 3, 30));
-cryptocurrencie.push(new Cryptos("XPR", 4, 25));
-
+cryptocurrencie.push(new Cryptos("LUNA", 6, 2.3));
+cryptocurrencie.push(new Cryptos("GMT", 7, 0.9));
+cryptocurrencie.push(new Cryptos("DogeCoin", 8, 0.07));
+cryptocurrencie.push(new Cryptos("YFII", 9, 0.2 ));
+cryptocurrencie.push(new Cryptos("EOS", 10, 30));
 
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);
+
+// CATEGORIES
+//Order arrays by name
+cryptocurrencie.sort((a, b) => {
+  return (a.name > b.name) ? 1 : -1;
+});
+console.log(cryptocurrencie);
+
+//Order arrays by price
+cryptocurrencie.sort((a, b) => {
+  return (a.value > b.value) ? 1 : -1;
+});
+console.log(cryptocurrencie);
+
