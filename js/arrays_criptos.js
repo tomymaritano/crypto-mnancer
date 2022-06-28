@@ -25,7 +25,12 @@ const cryptocurrencie = [
     id: 5,
     value: 52,
   },
+
 ];
+
+// const cryptocurrencieCopy = cryptocurrencie.slice();
+// console.log(cryptocurrencieCopy);
+
 
 //Constructor
 class Cryptos {
@@ -45,16 +50,11 @@ cryptocurrencie.push(new Cryptos("EOS", 10, 30));
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);
 
-// CATEGORIES
 //Order arrays by name
-cryptocurrencie.sort((a, b) => {
-  return (a.name > b.name) ? 1 : -1;
-});
+cryptocurrencie.sort((a, b) => { return (a.name < b.name) ? 1 : -1 });
 console.log(cryptocurrencie);
 
 //Order arrays by price
-cryptocurrencie.sort((a, b) => {
-  return (a.value > b.value) ? 1 : -1;
-});
+cryptocurrencie.sort((a, b) => { return (a.value > b.value) ? 1 : -1 });
 console.log(cryptocurrencie);
 
