@@ -12,11 +12,9 @@ const inputNumber = (e) => {
 };
 
 //IVA
-const iva = x => {return x * 0.21};
-
+const iva = x => x * 0.21;
+const taxes = (a, b, c) => { return alert(((a - b) / c) + ' ' + selectedCrypto.value) }
 //Bank transfers
 const sepa = x => {x - 1};
 const visaFee = x => {x * 0.18};
 
-//FUNCTION RETURN FINAL TAXES
-const taxes = (a, b, c) => { return alert(((a - b) / c) + ' ' + selectedCrypto.value) }

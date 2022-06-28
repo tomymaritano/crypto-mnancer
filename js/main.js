@@ -16,7 +16,7 @@ window.onload = () => {
         const selectCrypto = document.getElementById("selectedCrypto");
         const selectedCrypto =
           selectCrypto.options[selectCrypto.selectedIndex].value;
-        // console.log(selectedCrypto);
+          console.log(selectedCrypto);
 
         //ENGINE
           const engineFunction = () => {
@@ -25,7 +25,7 @@ window.onload = () => {
                 taxes(valueAmmount, iva(valueAmmount), cryptos.value);
                 break;
               };
-            }
+            };
           };
           engineFunction();
       };

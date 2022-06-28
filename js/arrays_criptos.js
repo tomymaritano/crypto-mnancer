@@ -28,8 +28,8 @@ const cryptocurrencie = [
 
 ];
 
-// const cryptocurrencieCopy = cryptocurrencie.slice();
-// console.log(cryptocurrencieCopy);
+const cryptocurrencieCopy = cryptocurrencie.slice();
+console.log(cryptocurrencieCopy);
 
 
 //Constructor
@@ -50,11 +50,33 @@ cryptocurrencie.push(new Cryptos("EOS", 10, 30));
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);
 
-//Order arrays by name
-cryptocurrencie.sort((a, b) => { return (a.name < b.name) ? 1 : -1 });
-console.log(cryptocurrencie);
+//Order arrays by value, name and id
 
-//Order arrays by price
-cryptocurrencie.sort((a, b) => { return (a.value > b.value) ? 1 : -1 });
-console.log(cryptocurrencie);
 
+//Mapping array to get on each element
+const cryptocurrencieMap = cryptocurrencie.map((x) => {
+  return {
+    rename: x.name,
+    value: x.value,
+    identi: x.id,
+  }
+});
+console.log(cryptocurrencieMap);
+
+//Sort by value
+const sortValue = () => {
+cryptocurrencieMap.sort((a,b) => (a.value > b.value) ? 1 : ((b.value > a.value) ? -1 : 0))
+return console.log(cryptocurrencieMap)
+};
+sortValue();
+
+//Sort by name
+const sortName = () => {
+cryptocurrencieMap.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
+return console.log(cryptocurrencie)
+};
+sortName();
+
+//Reduce method to get total ammount of crypto money
+const totalCryptoValue = cryptocurrencieMap.reduce((a,b) => a + b.value, 0)
+console.log(totalCryptoValue);
