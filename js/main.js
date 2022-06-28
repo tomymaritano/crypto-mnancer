@@ -21,9 +21,8 @@ window.onload = () => {
         const engine = () => {
           for (const cryptos of cryptocurrencie) {
             if (cryptos.name === selectedCrypto) {
-              const mainFunction = cryptocurrencie.find((element) => element.name === selectedCrypto);
-              // console.log(mainFunction)
-
+              const mainFunction = cryptocurrencie.find((a) => a.name === selectedCrypto);
+              // console.log(mainFunction);
               let mainFunctionResult;
               mainFunctionResult = mainFunction.value;
               // console.log(mainFunctionResult);
