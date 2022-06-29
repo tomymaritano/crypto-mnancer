@@ -45,10 +45,10 @@ cryptocurrencieClass.push(new Cryptos("GMT", 7, 0.9));
 cryptocurrencieClass.push(new Cryptos("DogeCoin", 8, 0.07));
 cryptocurrencieClass.push(new Cryptos("YFII", 9, 0.2));
 cryptocurrencieClass.push(new Cryptos("EOS", 10, 30));
-cryptocurrencieClass.push(new Cryptos("Tether", 11, 0.90));
+cryptocurrencieClass.push(new Cryptos("Tether", 11, 0.9));
 cryptocurrencieClass.push(new Cryptos("USD Coin", 12, 1.0));
 cryptocurrencieClass.push(new Cryptos("BNB", 13, 220.21));
-cryptocurrencieClass.push(new Cryptos("Solana", 14, 0.30));
+cryptocurrencieClass.push(new Cryptos("Solana", 14, 0.3));
 cryptocurrencieClass.push(new Cryptos("Polkadot", 15, 7.23));
 cryptocurrencieClass.push(new Cryptos("Shiba", 16, 0.004));
 cryptocurrencieClass.push(new Cryptos("Wrapped Coin", 17, 20.063));
@@ -78,15 +78,13 @@ const cryptocurrencieCopyMap = cryptocurrencieCopy.map((x) => {
     name: x.name,
     value: x.value,
     id: x.id,
-  }
+  };
 });
 // console.log(cryptocurrencieCopyMap);
-
 
 //Concat array class and main array
 const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
 // console.log(cryptoConcat)
-
 
 //Sort by value
 const sortValue = () => {
@@ -106,16 +104,14 @@ const sortName = () => {
 };
 //sortName();
 
-
 //Adding All cryptos to options
 const addingListArray = () => {
-  let listElements = document.getElementById('selectedCrypto'); 
+  let listElements = document.getElementById("selectedCrypto");
   for (const cryptos of cryptoConcat) {
-    let element = document.createElement('option')
-    element.innerHTML = `name: ${cryptos.name}`;
+    let element = document.createElement("option");
+    element.innerHTML = `${cryptos.name}`;
     listElements.appendChild(element);
-    };
-
+  }
 };
 addingListArray();
 
