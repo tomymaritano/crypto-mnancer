@@ -14,13 +14,11 @@ const inputNumber = (e) => {
 //IVA
 const iva = (x) => x * 0.21;
 const taxes = (a, b, c) => {
-  return alert((a - b) / c + " " + selectedCrypto.value);
+  return alert((a - b) / c + " " + selectedCrypto.value); 
 };
 
 //Bank transfers
-const sepa = (x) => {
-  x - 1;
-};
+const sepa = x => { x--; };
 const visaFee = (x) => {
   x * 0.18;
 };
