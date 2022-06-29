@@ -3,7 +3,6 @@ window.onload = () => {
   const form = document.getElementById("form");
   form.onsubmit = (e) => {
     e.preventDefault();
-    
 
     const charginAmmount = () => {
       const ammount = document.getElementById("ammount");
@@ -23,26 +22,34 @@ window.onload = () => {
           for (const cryptos of cryptoConcat) {
             if (cryptos.name === selectedCrypto && cryptos.id > 0) {
               return taxes(valueAmmount, iva(valueAmmount), cryptos.value);
-            };
-          };
+            }
+          }
         };
-        const buttonFunction = () => { 
-          const buyButton = document.querySelector('#buyButton').addEventListener('click', () => {return transactionFunction() });
-          const transactionHistory = document.querySelector('#transactions-history');
+        const buttonFunction = () => {
+          const buyButton = document
+            .querySelector("#buyButton")
+            .addEventListener("click", () => {
+              return transactionFunction();
+            });
+          const transactionHistory = document.querySelector(
+            "#transactions-history",
+          );
 
           const transactionFunction = (value) => {
-            let add = document.createElement('p');
-              add.textContent = value;
+            let add = document.createElement("p");
+            add.textContent = value;
             return add;
           };
 
-          transactionHistory.appendChild(transactionFunction(`${engineFunction()}, ${selectCrypto.value} `));
+          transactionHistory.appendChild(
+            transactionFunction(`${engineFunction()}, ${selectCrypto.value} `),
+          );
         };
 
         buttonFunction();
-    };
+      };
       cryptoCategory();
     };
-    charginAmmount(); 
+    charginAmmount();
   };
 };
