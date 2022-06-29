@@ -3,7 +3,7 @@ window.onload = () => {
   const form = document.getElementById("form");
   form.onsubmit = (e) => {
     e.preventDefault();
-
+    
     const charginAmmount = () => {
       const ammount = document.getElementById("ammount");
       const valueAmmount = ammount.value;
@@ -15,7 +15,7 @@ window.onload = () => {
         const selectCrypto = document.getElementById("selectedCrypto");
         const selectedCrypto =
           selectCrypto.options[selectCrypto.selectedIndex].value;
-        //console.log(selectedCrypto);
+        console.log(selectedCrypto);
 
         //ENGINE
         const engineFunction = () => {

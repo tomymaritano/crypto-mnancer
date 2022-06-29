@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 
 //Input numbers validation
 const inputNumber = (e) => {
-  var key = window.event ? e.which : e.keyCode;
+  let key = window.event ? e.which : e.keyCode;
   if (key < 48 || key > 57) {
     e.preventDefault();
   }

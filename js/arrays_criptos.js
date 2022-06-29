@@ -29,7 +29,7 @@ const cryptocurrencie = [
 
 //Array for class
 const cryptocurrencieClass = [];
-console.log(cryptocurrencieClass)
+// console.log(cryptocurrencieClass)
 
 //Constructor
 class Cryptos {
@@ -66,7 +66,7 @@ const cryptocurrencieMap = cryptocurrencie.map((x) => {
     id: x.id,
   };
 });
-console.log(cryptocurrencieMap);
+// console.log(cryptocurrencieMap);
 
 //Copying array copy
 const cryptocurrencieCopy = cryptocurrencieClass.slice();
@@ -85,7 +85,7 @@ const cryptocurrencieCopyMap = cryptocurrencieCopy.map((x) => {
 
 //Concat array class and main array
 const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
-console.log(cryptoConcat)
+// console.log(cryptoConcat)
 
 
 //Sort by value
@@ -106,13 +106,19 @@ const sortName = () => {
 };
 //sortName();
 
-const addingListArray = () => { 
+
+//Adding All cryptos to options
+const addingListArray = () => {
+  let listElements = document.getElementById('selectedCrypto'); 
   for (const cryptos of cryptoConcat) {
-      console.log(cryptos.name)     
+    let element = document.createElement('option')
+    element.innerHTML = `name: ${cryptos.name}`;
+    listElements.appendChild(element);
     };
+
 };
 addingListArray();
 
 //Reduce method to get total USD ammount of crypto money
-const totalCryptoValue = cryptocurrencieMap.reduce((a, b) => a + b.value, 0);
-console.log(totalCryptoValue);
+const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);
+// console.log(totalCryptoValue);
