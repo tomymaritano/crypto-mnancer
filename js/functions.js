@@ -24,3 +24,4 @@ const sepa = (x) => {
 const visaFee = (x) => {
   x * 0.18;
 };
+

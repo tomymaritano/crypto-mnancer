@@ -31,27 +31,31 @@ const cryptocurrencie = [
 const cryptocurrencieClass = [];
 // console.log(cryptocurrencieClass)
 
-//Constructor
+//Constructor increasing id automatically
+
 class Cryptos {
-  constructor(name, id, value) {
+  static count = 5;
+  constructor(name, value) {
     this.name = name;
-    this.id = id;
+    this.id = ++this.constructor.count;
     this.value = value;
   }
 }
 
-cryptocurrencieClass.push(new Cryptos("LUNA", 6, 2.3));
-cryptocurrencieClass.push(new Cryptos("GMT", 7, 0.9));
-cryptocurrencieClass.push(new Cryptos("DogeCoin", 8, 0.07));
-cryptocurrencieClass.push(new Cryptos("YFII", 9, 0.2));
-cryptocurrencieClass.push(new Cryptos("EOS", 10, 30));
-cryptocurrencieClass.push(new Cryptos("Tether", 11, 0.9));
-cryptocurrencieClass.push(new Cryptos("USD Coin", 12, 1.0));
-cryptocurrencieClass.push(new Cryptos("BNB", 13, 220.21));
-cryptocurrencieClass.push(new Cryptos("Solana", 14, 0.3));
-cryptocurrencieClass.push(new Cryptos("Polkadot", 15, 7.23));
-cryptocurrencieClass.push(new Cryptos("Shiba", 16, 0.004));
-cryptocurrencieClass.push(new Cryptos("Wrapped Coin", 17, 20.063));
+cryptocurrencieClass.push(new Cryptos("LUNA", 2.3));
+cryptocurrencieClass.push(new Cryptos("GMT", 0.9));
+cryptocurrencieClass.push(new Cryptos("DogeCoin", 0.07));
+cryptocurrencieClass.push(new Cryptos("YFII", 0.2));
+cryptocurrencieClass.push(new Cryptos("EOS", 30));
+cryptocurrencieClass.push(new Cryptos("Tether", 0.9));
+cryptocurrencieClass.push(new Cryptos("USD Coin", 1.0));
+cryptocurrencieClass.push(new Cryptos("BNB", 220.21));
+cryptocurrencieClass.push(new Cryptos("Solana", 0.3));
+cryptocurrencieClass.push(new Cryptos("Polkadot", 7.23));
+cryptocurrencieClass.push(new Cryptos("Shiba", 0.004));
+cryptocurrencieClass.push(new Cryptos("Wrapped Coin", 20.063));
+
+
 
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);
@@ -84,7 +88,7 @@ const cryptocurrencieCopyMap = cryptocurrencieCopy.map((x) => {
 
 //Concat array class and main array
 const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
-// console.log(cryptoConcat)
+console.log(cryptoConcat)
 
 //Sort by value
 const sortValue = () => {
@@ -105,8 +109,9 @@ const sortName = () => {
 //sortName();
 
 //Adding All cryptos to options
+const listElements = document.getElementById("selectedCrypto");
+
 const addingListArray = () => {
-  let listElements = document.getElementById("selectedCrypto");
   for (const cryptos of cryptoConcat) {
     let element = document.createElement("option");
     element.innerHTML = `${cryptos.name}`;
