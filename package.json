@@ -1,25 +1,25 @@
 {
-  "name": "mybulma",
+  "name": "crypto-mnancer",
   "version": "1.0.0",
-  "main": "scss/styles.scss",
-  "license": "MIT",
-  "devDependencies": {
-    "bulma": "^0.7.2",
-    "node-sass": "^4.9.2"
-  },
+  "description": "## PROJECT - CRYPTO SIMULATOR",
+  "main": "navbar.js",
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url scss/styles.scss css/mystyles.css",
+    "css-build": "node-sass --omit-source-map-url scss/styles.scss css/styles.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch"
   },
-  "description": "## PROJECT - CRYPTO SIMULATOR",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/craftzcode/crypto-mnancer.git"
   },
-  "author": "",
+  "author": "tomas maritnao",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/craftzcode/crypto-mnancer/issues"
   },
-  "homepage": "https://github.com/craftzcode/crypto-mnancer#readme"
+  "homepage": "https://github.com/craftzcode/crypto-mnancer#readme",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "node-sass": "^7.0.1"
+  }
 }
