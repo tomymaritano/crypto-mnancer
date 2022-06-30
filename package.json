@@ -21,5 +21,9 @@
   "devDependencies": {
     "bulma": "^0.9.4",
     "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "@sweetalert2/theme-bulma": "^5.0.11",
+    "sweetalert2": "^11.4.19"
   }
 }

@@ -3,7 +3,6 @@ window.onload = () => {
   const form = document.getElementById("form");
   form.onsubmit = (e) => {
     e.preventDefault();
-
     //Getting investment ammount
     const charginAmmount = () => {
       const ammount = document.getElementById("ammount");
@@ -41,7 +40,7 @@ window.onload = () => {
 
           const transactionFunction = (value) => {
             let add = document.createElement("div");
-            add.classList.add("container");
+            add.classList.add('container');
             add.textContent = value;
             return add;
           };

@@ -106,7 +106,7 @@ const cryptocurrencieCopyMap = cryptocurrencieCopy.map((x) => {
 
 //Concat array class and main array
 const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
-console.log(cryptoConcat)
+// console.log(cryptoConcat)
 
 //Sort by value
 const sortValue = () => {
