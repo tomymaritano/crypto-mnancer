@@ -36,13 +36,14 @@ window.onload = () => {
           );
 
           const transactionFunction = (value) => {
-            let add = document.createElement("p");
+            let add = document.createElement("div");
             add.textContent = value;
             return add;
           };
 
           transactionHistory.appendChild(
-            transactionFunction(`${engineFunction()}, ${selectCrypto.value} `),
+            transactionFunction(`${engineFunction()}, ${selectCrypto.value}
+            `),
           );
         };
 
