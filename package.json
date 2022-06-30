@@ -8,8 +8,18 @@
     "node-sass": "^4.9.2"
   },
   "scripts": {
-  "css-build": "node-sass --omit-source-map-url scss/styles.scss css/mystyles.css",
-  "css-watch": "npm run css-build -- --watch",
-  "start": "npm run css-watch"
-}
+    "css-build": "node-sass --omit-source-map-url scss/styles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "description": "## PROJECT - CRYPTO SIMULATOR",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftzcode/crypto-mnancer.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/craftzcode/crypto-mnancer/issues"
+  },
+  "homepage": "https://github.com/craftzcode/crypto-mnancer#readme"
 }
