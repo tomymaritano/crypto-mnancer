@@ -7977,3 +7977,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   display: flex;
   flex-direction: column;
   padding-left: 2.5rem; }
+
+.prueba {
+  background: red; }
