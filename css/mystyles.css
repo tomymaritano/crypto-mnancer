@@ -7977,3 +7977,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   display: flex;
   flex-direction: column;
   padding-left: 2.5rem; }
+
+#transactions-history {
+  margin-top: 1rem; }
+
+.history-container {
+  padding: 0.2rem; }
+
+.history-container:hover {
+  background-color: rgba(203, 203, 203, 0.233); }

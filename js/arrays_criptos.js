@@ -39,7 +39,7 @@ class Cryptos {
     this.name = name;
     this.id = ++this.constructor.count;
     this.value = value;
-  }
+  };
 };
 
 cryptocurrencieClass.push(new Cryptos("LUNA", 2.3));
@@ -132,7 +132,7 @@ const listElements = document.getElementById("selectedCrypto");
 const addingListArray = () => {
   for (const cryptos of cryptoConcat) {
     let element = document.createElement("option");
-    element.innerHTML = `${cryptos.name}`;
+    element.textContent = `${cryptos.name}`;
     listElements.appendChild(element);
   }
 };

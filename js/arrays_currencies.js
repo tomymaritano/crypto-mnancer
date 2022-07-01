@@ -18,7 +18,7 @@ class Currencie {
     constructor (name, id) {
     this.id = ++this.constructor.count;
     this.name = name;
-    }
+    };
 }
 
 currencie.push (new currencieConstructor('yen'));

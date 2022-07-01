@@ -1,8 +1,10 @@
+//Alerts
+
+
 //Input numbers validation
 window.addEventListener("load", function () {
   form.ammount.addEventListener("keypress", inputNumber, false);
 });
-
 
 //Input numbers validation
 const inputNumber = (e) => {

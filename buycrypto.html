@@ -77,7 +77,7 @@
           <div class="navbar-item">
             <a class="navbar-item"> English </a>
             <a id="dolar" class="navbar-item"> USD </a>
-            <a class="navbar-item" id="historial"><i class="fa-solid fa-store"></i></a>
+            <a class="navbar-item js-modal-trigger" id="historial" data-target="modal-js-example"><i class="fa-solid fa-store"></i></a>
             <a class="navbar-item">
               <i class="fa-solid fa-moon"></i>
             </a>
@@ -98,27 +98,18 @@
         <div class="columns m-6">
           <div class="column is-two-fifths">
             <div class="content">
-              <h2 class="subtitle is-5">1. Select Currency</h2>
+              <h2 class="subtitle is-5 has-text-weight-bold">1. Select Currency</h2>
             </div>
             <form method="POST" id="form" name="form" class="form">
-             <div id="currency" class="field is-size-7">Currency</div>
+             <div id="currency" class="field is-size-7">Cryptocurrency</div>
             <div class="control">
-              <!-- <div id="selectCurrency" class="select is-small">
-                <select id="selected-currency" onchange="getCur()">
-                  <option value="dolar">Dolar</option>
-                  <option value="euro">Euro</option>
-                  <option value="pound">Pound sterling</option>
-                  <option value="turkish">Turkish Lira</option>
-                  <option value="real">Brazilian Real</option>
-                </select>
-              </div> -->
               <div id="select-crypto" class="select is-fullwidth is-small">
                 <select id="selectedCrypto">
                 </select>
               </div>
               <div class="field is-size-7 mt-4">Ammount</div>
               <div class="control">
-                <input id="ammount" name="ammount" placeholder="ammount" class="input is-small" type="text" />
+                <input id="ammount" name="ammount" placeholder="U$D Ammount" class="input is-small" type="text" />
               </div>
               <div class="control mt-5">
                 <h2 class="subtitle is-7">Deposit with</h2>
@@ -163,24 +154,25 @@
             <div class="control is-fullwidth mt-5">
               <div class="columns">
                 <div class="column">
-                  <button id="buyButton" type="submit" class="button is-warning is-small is-fullwidth">Buy</button>
+                  <div class="content">
+                    <button id="buyButton" type="submit" class="button is-warning is-small is-fullwidth">Buy</button>
+                  </div>                  
                 </div>
                 <div class="column">
-                  <button id="resetButton" type="reset" class="button is-warning is-small is-fullwidth">Reset</button>
+                  <div class="content">
+                    <button id="resetButton" type="reset" class="button is-warning is-small is-fullwidth">Reset</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
             </form>
             <div class="column">
-              <div class="container">
-                <div class="content">
-                  <h2 class="subtitle is-5 has-text-weight-bold">2. History</h2>
-                  <p>Control transactions</p>
-                  <div id="transactions-history" class="container">
-                  </div>
+                <div class="content has-text-centered">
+                  <h2 class="subtitle is-5 has-text-weight-bold">FAQ</h2>
+                  <p>Where can I see my history? Press the market icon on top. Located in the navbar</p>
+                  
                 </div>              
-              </div>
             </div>
         </div>
       </div>
@@ -284,12 +276,26 @@
         </div>
       </div>
     </footer>
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+    
+      <div class="modal-content">
+        <div class="box">
+          <p>History transactions</p>
+          <div id="transactions-history" class="container">
+          </div>
+        </div>
+      </div>
+    
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
   </body>
   <script src="navbar.js"></script>
   <script
     src="https://kit.fontawesome.com/5ac9c25f76.js"
     crossorigin="anonymous"
   ></script>
+  <script src="js/modal.js"></script>
   <script src="js/functions.js"></script>
   <script src="js/arrays_criptos.js"></script>
   <script src="js/main.js"></script>

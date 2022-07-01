@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/craftzcode/crypto-mnancer/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/craftzcode/crypto-mnancer#readme",
   "devDependencies": {
     "bulma": "^0.9.4",
