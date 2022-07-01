@@ -13,12 +13,14 @@ const currencies = [
     }
 ];
 
-class currencie {
-    currenciesConstructor (name, id) {
+class Currencie {
+    static count = 3;
+    constructor (name, id) {
+    this.id = ++this.constructor.count;
     this.name = name;
-    this.id = id;
     }
 }
 
-currencie.push (new currencieConstructor('yen', 4));
+currencie.push (new currencieConstructor('yen'));
+
 

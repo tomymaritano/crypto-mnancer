@@ -28,7 +28,7 @@ window.onload = () => {
             };
           };
         };
-        const buttonFunction = () => {
+        const buttonFunction = (button) => {
           const buyButton = document
             .querySelector("#buyButton")
             .addEventListener("click", () => {
