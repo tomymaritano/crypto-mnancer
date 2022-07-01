@@ -136,7 +136,7 @@
               </div>
               <div class="control is-size-7 mt-4">
                 <label class="radio">
-                  <input id="inputVisaFree" class="radioButtons" type="radio" name="foobar" />
+                  <input id="inputVisaFee" class="radioButtons" type="radio" name="foobar" />
                 </label>
                 <span class="icon-text">
                   <span class="icon">
@@ -170,7 +170,7 @@
             <div class="column">
                 <div class="content has-text-centered">
                   <h2 class="subtitle is-5 has-text-weight-bold">FAQ</h2>
-                  <p>Where can I see my history? Press the market icon on top. Located in the navbar</p>
+                  <p class="is-size-7">Where can I see my history? Press the market icon on top. Located in the navbar</p>
                   
                 </div>              
             </div>
@@ -276,18 +276,22 @@
         </div>
       </div>
     </footer>
-    <div id="modal-js-example" class="modal">
+    <div id="modal-js-example" class="modal fade" role="dialog">
       <div class="modal-background"></div>
-    
-      <div class="modal-content">
-        <div class="box">
-          <p>History transactions</p>
-          <div id="transactions-history" class="container">
-          </div>
-        </div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Transactions History</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- Content ... -->
+          <div id="transactions-history"></div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-warning">Download</button>
+          <button class="button">Close</button>
+        </footer>
       </div>
-    
-      <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </body>
   <script src="navbar.js"></script>

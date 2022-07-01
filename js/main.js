@@ -28,7 +28,7 @@ window.onload = () => {
           };
         };
 
-        //Event button
+        //Event button to show results
         const buttonFunction = (button) => {
           if (valueAmmount > 0) {
             this.button = alert("Transaccion completada");
