@@ -2,19 +2,18 @@
 @import "../node_modules/bulma/bulma.sass";
 @import "bitcoin.scss";
 
-
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 // Set your brand colors
 $black: #000000;
 $grey: rgb(70, 70, 70);
-$purple: #8A4D76;
+$purple: #8a4d76;
 $brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
-$mnancer: #F2C335;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+$mnancer: #f2c335;
 
 // Update Bulma's global variables
 $family-sans-serif: "Anek Latin", sans-serif;
@@ -49,140 +48,139 @@ $navbar-burger-color: $mnancer;
 // @import "../node_modules/bulma/sass/grid/_all.sass";
 // @import "../node_modules/bulma/sass/components/level.sass";
 
-
 //Breadcums
 .breadcrumb li a {
-    color: rgb(78, 78, 78);
-};
+  color: rgb(78, 78, 78);
+}
 
 .breadcrumb-big li:hover {
-    background-color: #d3d1d13d;
-    border-radius: 1rem;
-};
-
+  background-color: #d3d1d13d;
+  border-radius: 1rem;
+}
 
 #h1 {
-    display: flex;
-    align-items: center;
-};
+  display: flex;
+  align-items: center;
+}
 
 .is-mnancer {
-    background-color: $mnancer;
-};
-
+  background-color: $mnancer;
+}
 
 .popular-crypto p {
-    font-size: 0.8rem;
-    color: grey;
+  font-size: 0.8rem;
+  color: grey;
 }
 
 .popular-crypto .columns:hover {
-    background-color: #e9e9e957;
-};
+  background-color: #e9e9e957;
+}
 
 .build-crypto {
-    background: white;
-};
+  background: white;
+}
 
 .build-crypto-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 2rem;
-};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
 
 .build-crypto button {
-    margin-top: 2rem;
-};
+  margin-top: 2rem;
+}
 
 .portfolio-column {
-    display: flex;
-    justify-content: center;
-};
+  display: flex;
+  justify-content: center;
+}
 
 #navbar {
-    font-size: 0.8rem;
-};
+  font-size: 0.8rem;
+}
 
-@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+@media (max-width: 767px) {
+  /* <== You can change this break point as per your  needs */
   .custom-columns {
     flex-direction: column-reverse;
     display: flex;
   }
-};
+}
 
-.explore-section { background-color: white; }
+.explore-section {
+  background-color: white;
+}
 
 .mnancer-cards .column .card:hover {
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.45);
-    box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.45);
-};
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.45);
+  box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.45);
+}
 .mnancer-cards .card {
-    height: 100%;
-};
+  height: 100%;
+}
 .trusted-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .trusted-crypto-exchange {
-    background-color: white;
-};
+  background-color: white;
+}
 
 .need-help {
-    background-color: white;
-};
+  background-color: white;
+}
 
 .footer-social-list {
-    display: flex;
-    justify-content: space-around;
-};
+  display: flex;
+  justify-content: space-around;
+}
 .simple-hover {
-    border-radius: 1rem;
-};
+  border-radius: 1rem;
+}
 
 .simple-hover:hover {
-    background-color: white;
-    transition: background 1s;
-};
-
+  background-color: white;
+  transition: background 1s;
+}
 
 .btc-prueba:hover {
-    background: rgba(192, 192, 192, 0.247);
-    transition: background 1s;
-};
+  background: rgba(192, 192, 192, 0.247);
+  transition: background 1s;
+}
 
 .span-img {
-    display: flex;
-};
+  display: flex;
+}
 
 .span-img span {
-    margin-left: 0.2rem;
-};
+  margin-left: 0.2rem;
+}
 
 .border-bottom {
-    border-bottom: 0.5px solid rgba(128, 128, 128, 0.212);
-};
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.212);
+}
 
 .border-bottom:hover {
-        background: rgba(235, 233, 233, 0.222);
-};
+  background: rgba(235, 233, 233, 0.222);
+}
 
 .span-bank-cards {
-    display: flex;
-    flex-direction: column;
-    padding-left: 2.5rem;
-};
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5rem;
+}
 
 #transactions-history {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .history-container {
-    padding: 0.2rem;
-};
+  padding: 0.2rem;
+}
 .history-container:hover {
-    background-color:rgba(203, 203, 203, 0.233);
-};
+  background-color: rgba(203, 203, 203, 0.233);
+}

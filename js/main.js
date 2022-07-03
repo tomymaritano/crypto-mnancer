@@ -11,27 +11,36 @@ window.onload = () => {
       //Getting crypto category
       const cryptoCategory = () => {
         const selectCrypto = document.getElementById("selectedCrypto");
-        const selectedCrypto = selectCrypto.options[selectCrypto.selectedIndex].value;
+        const selectedCrypto =
+          selectCrypto.options[selectCrypto.selectedIndex].value;
         // console.log(selectedCrypto);
 
         //Engine function and parseFloat function with toFixed() to get 3 decimals;
         const engineFunction = () => {
           for (const cryptos of cryptoConcat) {
             if (cryptos.name === selectedCrypto) {
-              return parseFloat(taxes(valueAmmount, iva(valueAmmount), cryptos.value)).toFixed(3);
-            };
-          };
+              return parseFloat(
+                taxes(valueAmmount, iva(valueAmmount), cryptos.value)
+              ).toFixed(3);
+            }
+          }
         };
 
         //Event button to show results
         const clickButtonFunction = () => {
           //Button Validation
-          const buttonValidation = (button) => { 
+          const buttonValidation = (button) => {
             if (valueAmmount > 0) {
               this.button = alert("Transaccion completada");
-              document.querySelector("#buyButton").addEventListener("click", () => { return transactionFunction() });
+              document
+                .querySelector("#buyButton")
+                .addEventListener("click", () => {
+                  return transactionFunction();
+                });
 
-              const transactionHistory = document.querySelector("#transactions-history");
+              const transactionHistory = document.querySelector(
+                "#transactions-history"
+              );
               const transactionFunction = (value) => {
                 let add = document.createElement("div");
                 add.classList.add("container", "history-container");
@@ -39,16 +48,21 @@ window.onload = () => {
                 return add;
               };
 
-              transactionHistory.appendChild(transactionFunction(`Date 29.02.3 (Prueba) , Total ${selectCrypto.value} = ${engineFunction()}`));
+              transactionHistory.appendChild(
+                transactionFunction(
+                  `Date 29.02.3 (Prueba) , Total ${
+                    selectCrypto.value
+                  } = ${engineFunction()}`
+                )
+              );
             } else if (valueAmmount == false) {
               alert("Enter ammount to buy");
+            } else {
+              console.log("wrong");
             }
-            else {
-              console.log('wrong');
-            };
           };
           buttonValidation();
-          };
+        };
         clickButtonFunction();
       };
       cryptoCategory();
