@@ -7,9 +7,6 @@ window.onload = () => {
     const charginAmmount = () => {
       const ammount = document.getElementById("ammount");
       const valueAmmount = ammount.value;
-      // console.log(
-      //   "Estas invirtiendo un total de " + " " + valueAmmount + " " + "USD",
-      // );
 
       //Getting crypto category
       const cryptoCategory = () => {
@@ -20,40 +17,53 @@ window.onload = () => {
         //Engine function and parseFloat function with toFixed() to get 3 decimals;
         const engineFunction = () => {
           for (const cryptos of cryptoConcat) {
-            if (cryptos.name === selectedCrypto && cryptos.id > 0) {
-              return parseFloat(
-                taxes(valueAmmount, iva(valueAmmount), cryptos.value)
-              ).toFixed(3);
+            if (cryptos.name === selectedCrypto) {
+              return parseFloat(taxes(valueAmmount, iva(valueAmmount), cryptos.value)).toFixed(3);
             };
           };
         };
 
         //Event button to show results
-        const buttonFunction = (button) => {
-          if (valueAmmount > 0) {
-            this.button = alert("Transaccion completada");
-            const buyButton = document.querySelector("#buyButton").addEventListener("click", () => {
-                return transactionFunction();
-              });
+        const clickButtonFunction = () => {
+          //Button Validation
+          const buttonValidation = (button) => { 
+            if (valueAmmount > 0) {
+              this.button = alert("Transaccion completada");
+              document.querySelector("#buyButton").addEventListener("click", () => { return transactionFunction() });
 
-            const transactionHistory = document.querySelector("#transactions-history");
+              const transactionHistory = document.querySelector("#transactions-history");
+              const transactionFunction = (value) => {
+                let add = document.createElement("div");
+                add.classList.add("container", "history-container");
+                add.textContent = value;
+                return add;
+              };
 
-            const transactionFunction = (value) => {
-              let add = document.createElement("div");
-              add.classList.add("container", "history-container");
-              add.textContent = value;
-              return add;
+              transactionHistory.appendChild(transactionFunction(`Date 29.02.3 (Prueba) , Total ${selectCrypto.value} = ${engineFunction()}`));
+            } else if (valueAmmount == false) {
+              alert("Enter ammount to buy");
+            }
+            else {
+              console.log('wrong');
             };
-
-            transactionHistory.appendChild(transactionFunction(`Date 29.02.3 (Prueba) , Total ${selectCrypto.value} = ${engineFunction()}`));
-          }else if (valueAmmount == false) {
-            alert('Enter ammount to buy')
-          }; 
-        };
-        buttonFunction();
+          };
+          buttonValidation();
+          };
+        clickButtonFunction();
       };
       cryptoCategory();
     };
     charginAmmount();
   };
+
+  //Adding All cryptos to options
+  const listElements = document.getElementById("selectedCrypto");
+  const addingListArray = () => {
+    for (const cryptos of cryptoConcat) {
+      let element = document.createElement("option");
+      element.textContent = `${cryptos.name}`;
+      listElements.appendChild(element);
+    }
+  };
+  addingListArray();
 };

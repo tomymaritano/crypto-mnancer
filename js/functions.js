@@ -1,6 +1,3 @@
-//Alerts
-
-
 //Input numbers validation
 window.addEventListener("load", function () {
   form.ammount.addEventListener("keypress", inputNumber, false);
@@ -20,9 +17,7 @@ const taxes = (a, b, c) => {
   return (a - b) / c;
 };
 
-
 //Bank transfers
-
 const sepa = (x) => {
   x--;
 };
@@ -30,4 +25,3 @@ const sepa = (x) => {
 const visaFee = (x) => {
   x * 0.18;
 };
-

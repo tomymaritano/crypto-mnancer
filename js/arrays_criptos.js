@@ -4,26 +4,31 @@ const cryptocurrencie = [
     name: "Bitcoin",
     id: 1,
     value: 19250,
+    mktvalue: 35.000000,
   },
   {
     name: "Etherum",
     id: 2,
     value: 1400,
+    mktvalue: 35.000000,
   },
   {
     name: "XPR",
     id: 3,
     value: 0.3,
+    mktvalue: 35.000000,
   },
   {
     name: "Cardano",
     id: 4,
     value: 6.8,
+    mktvalue: 35.000000,
   },
   {
     name: "LiteCoin",
     id: 5,
     value: 52,
+    mktvalue: 35.000000,
   },
 ];
 
@@ -35,45 +40,46 @@ const cryptocurrencieClass = [];
 
 class Cryptos {
   static count = 5;
-  constructor(name, value) {
+  constructor(name, value, mktvalue) {
     this.name = name;
     this.id = ++this.constructor.count;
     this.value = value;
+    this.mktvalue = mktvalue;
   };
 };
 
-cryptocurrencieClass.push(new Cryptos("LUNA", 2.3));
-cryptocurrencieClass.push(new Cryptos("GMT", 0.9));
-cryptocurrencieClass.push(new Cryptos("DogeCoin", 0.07));
-cryptocurrencieClass.push(new Cryptos("YFII", 0.2));
-cryptocurrencieClass.push(new Cryptos("EOS", 30));
-cryptocurrencieClass.push(new Cryptos("Tether", 0.9));
-cryptocurrencieClass.push(new Cryptos("USD Coin", 1.0));
-cryptocurrencieClass.push(new Cryptos("BNB", 220.21));
-cryptocurrencieClass.push(new Cryptos("Solana", 0.3));
-cryptocurrencieClass.push(new Cryptos("Polkadot", 7.23));
-cryptocurrencieClass.push(new Cryptos("Shiba", 0.004));
-cryptocurrencieClass.push(new Cryptos("Wrapped Coin", 20.063));
-cryptocurrencieClass.push(new Cryptos("Avalance", 17.78));
-cryptocurrencieClass.push(new Cryptos("Polygon", 0.50));
-cryptocurrencieClass.push(new Cryptos("Uniswap", 5.15 ));
-cryptocurrencieClass.push(new Cryptos("FTX Token", 25.27));
-cryptocurrencieClass.push(new Cryptos("ChainLink", 6.40));
-cryptocurrencieClass.push(new Cryptos("Cronos", 0.11));
-cryptocurrencieClass.push(new Cryptos("Stellar", 0.1097));
-cryptocurrencieClass.push(new Cryptos("NEAR Protocol", 3.51));
-cryptocurrencieClass.push(new Cryptos("Monero", 124.61));
-cryptocurrencieClass.push(new Cryptos("Algorand", 0.3052));
-cryptocurrencieClass.push(new Cryptos("Cosmos", 7.27));
-cryptocurrencieClass.push(new Cryptos("Etherum Classic", 15.35));
-cryptocurrencieClass.push(new Cryptos("Bitcoin Cash", 106.92));
-cryptocurrencieClass.push(new Cryptos("VeChain", 0.02313));
-cryptocurrencieClass.push(new Cryptos("Flow", 1.61));
-cryptocurrencieClass.push(new Cryptos("Decentraland", 0.8869));
-cryptocurrencieClass.push(new Cryptos("ApeCoin", 4.80));
-cryptocurrencieClass.push(new Cryptos("Hedera", 0.06604));
-cryptocurrencieClass.push(new Cryptos("Tezos", 1.51));
-cryptocurrencieClass.push(new Cryptos("The SandBox", 1.05));
+cryptocurrencieClass.push(new Cryptos("LUNA", 2.3, 35.000000));
+cryptocurrencieClass.push(new Cryptos("GMT", 0.9, 24.000));
+cryptocurrencieClass.push(new Cryptos("DogeCoin", 0.07, 24.000));
+cryptocurrencieClass.push(new Cryptos("YFII", 0.2, 24.000));
+cryptocurrencieClass.push(new Cryptos("EOS", 30, 24.000));
+cryptocurrencieClass.push(new Cryptos("Tether", 0.9, 24.000));
+cryptocurrencieClass.push(new Cryptos("USD Coin", 1.0, 24.000));
+cryptocurrencieClass.push(new Cryptos("BNB", 220.21, 24.000));
+cryptocurrencieClass.push(new Cryptos("Solana", 0.3, 24.000));
+cryptocurrencieClass.push(new Cryptos("Polkadot", 7.23, 24.000));
+cryptocurrencieClass.push(new Cryptos("Shiba", 0.004, 24.000));
+cryptocurrencieClass.push(new Cryptos("Wrapped Coin", 20.063, 24.000));
+cryptocurrencieClass.push(new Cryptos("Avalance", 17.78, 24.000));
+cryptocurrencieClass.push(new Cryptos("Polygon", 0.50, 24.000));
+cryptocurrencieClass.push(new Cryptos("Uniswap", 5.15 , 24.000));
+cryptocurrencieClass.push(new Cryptos("FTX Token", 25.27, 24.000));
+cryptocurrencieClass.push(new Cryptos("ChainLink", 6.40, 24.000));
+cryptocurrencieClass.push(new Cryptos("Cronos", 0.11, 24.000));
+cryptocurrencieClass.push(new Cryptos("Stellar", 0.1097, 24.000));
+cryptocurrencieClass.push(new Cryptos("NEAR Protocol", 3.51, 24.000));
+cryptocurrencieClass.push(new Cryptos("Monero", 124.61, 24.000));
+cryptocurrencieClass.push(new Cryptos("Algorand", 0.3052, 24.000));
+cryptocurrencieClass.push(new Cryptos("Cosmos", 7.27, 24.000));
+cryptocurrencieClass.push(new Cryptos("Etherum Classic", 15.35, 24.000));
+cryptocurrencieClass.push(new Cryptos("Bitcoin Cash", 106.92, 24.000));
+cryptocurrencieClass.push(new Cryptos("VeChain", 0.02313, 24.000));
+cryptocurrencieClass.push(new Cryptos("Flow", 1.61, 24.000));
+cryptocurrencieClass.push(new Cryptos("Decentraland", 0.8869, 24.000));
+cryptocurrencieClass.push(new Cryptos("ApeCoin", 4.80, 24.000));
+cryptocurrencieClass.push(new Cryptos("Hedera", 0.06604, 24.000));
+cryptocurrencieClass.push(new Cryptos("Tezos", 1.51, 24.000));
+cryptocurrencieClass.push(new Cryptos("The SandBox", 1.05, 24.000));
 
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);
@@ -125,18 +131,6 @@ const sortName = () => {
   return console.log(cryptocurrencie);
 };
 //sortName();
-
-//Adding All cryptos to options
-const listElements = document.getElementById("selectedCrypto");
-
-const addingListArray = () => {
-  for (const cryptos of cryptoConcat) {
-    let element = document.createElement("option");
-    element.textContent = `${cryptos.name}`;
-    listElements.appendChild(element);
-  }
-};
-addingListArray();
 
 //Reduce method to get total USD ammount of crypto money
 const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);

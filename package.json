@@ -6,7 +6,8 @@
   "scripts": {
     "css-build": "node-sass --omit-source-map-url scss/styles.scss css/mystyles.css",
     "css-watch": "npm run css-build -- --watch",
-    "start": "npm run css-watch"
+    "start": "npm run css-watch",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,13 @@
   "homepage": "https://github.com/craftzcode/crypto-mnancer#readme",
   "devDependencies": {
     "bulma": "^0.9.4",
-    "node-sass": "^7.0.1"
+    "eslint": "^8.19.0",
+    "node-sass": "^7.0.1",
+    "prettier": "2.7.1"
   },
   "dependencies": {
     "@sweetalert2/theme-bulma": "^5.0.11",
     "sweetalert2": "^11.4.19"
-  }
+  },
+  "keywords": []
 }
