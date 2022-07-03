@@ -8,8 +8,8 @@
 #### FrameworkUsage
 
 1) go to cd/final_project
-
-2) npm run start - to iniciate SASS
+2) npm install (install all dependencies)
+3) npm run start - to iniciate SASS
 
 
 ##### You can contact me at [email](tomymaritano@gmail.com)
