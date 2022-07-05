@@ -116,10 +116,10 @@
                         <div class="control is-block-mobile is-flex-fullhd">
                             <div class="columns">
                                 <div class="column is-four-fifths">
-                                    <input class="input" type="text" placeholder="Email / phone number">
+                                    <input id="emailStarted" class="input" type="text" placeholder="Email / phone number">
                                 </div>
                                 <div class="column">
-                                    <button class="button is-warning is-fullwidth is-hovered">Get started</button>
+                                    <button id="emailStartedButton" type="submit" class="button is-warning is-fullwidth is-hovered">Get started</button>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
         <!--Users-->
         <div class="container mt-5 is-hidden-mobile">
             <div class="columns">
-                <div class="column is-half-mobile">
+                <div class="column">
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="title">$76 billion</p>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-half-mobile">
+                <div class="column">
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="title">$76 billion</p>
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-half-mobile">
+                <div class="column">
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="title">$76 billion</p>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-half-mobile">
+                <div class="column">
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="title">$76 billion</p>
@@ -247,8 +247,10 @@
     </section>
     <section class="section">
         <div class="container">
-            <h2 class="title is-5">Sign Up now to build your own portfolio for free!</h2>
-            <button class="button is-warning">Sign Up</button>
+            <div class="content">
+                <h2 class="title is-5">Sign Up now to build your own portfolio for free!</h2>
+                <button class="button is-warning">Sign Up</button>
+            </div>
         </div>
     </section>
     <section class="section build-crypto">
@@ -634,6 +636,7 @@
     </footer>
 </body>
 <script src="navbar.js"></script>
+<script src="js/index.js"></script>
 <script src="js/market.js"></script>
 <script src="js/arrays_criptos.js"></script>
 <script src="https://kit.fontawesome.com/5ac9c25f76.js" crossorigin="anonymous"></script>

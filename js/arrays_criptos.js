@@ -135,3 +135,8 @@ const sortName = () => {
 //Reduce method to get total USD ammount of crypto money
 const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);
 // console.log(totalCryptoValue);
+
+
+//Buying array
+const cryptoBuying = [];
+console.log(cryptoBuying);

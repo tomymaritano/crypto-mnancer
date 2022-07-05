@@ -19,9 +19,7 @@ window.onload = () => {
         const engineFunction = () => {
           for (const cryptos of cryptoConcat) {
             if (cryptos.name === selectedCrypto) {
-              return parseFloat(
-                taxes(valueAmmount, iva(valueAmmount), cryptos.value)
-              ).toFixed(3);
+              return parseFloat(taxes(valueAmmount, iva(valueAmmount), cryptos.value)).toFixed(3);
             }
           }
         };
@@ -30,17 +28,16 @@ window.onload = () => {
         const clickButtonFunction = () => {
           //Button Validation
           const buttonValidation = (button) => {
-            if (valueAmmount > 0) {
-              this.button = alert("Transaccion completada");
-              document
-                .querySelector("#buyButton")
-                .addEventListener("click", () => {
-                  return transactionFunction();
-                });
+            //Money spent
+            const moneySpent = cryptoBuying.push(engineFunction())
+              console.log(moneySpent, cryptoBuying)
 
-              const transactionHistory = document.querySelector(
-                "#transactions-history"
-              );
+            //Transaction
+            if (valueAmmount > 0) {
+              this.button = alert("Transaction complete! Taxes included.");
+              document.querySelector("#buyButton").addEventListener("click", () => { return transactionFunction(); });
+
+              const transactionHistory = document.querySelector("#transactions-history");
               const transactionFunction = (value) => {
                 let add = document.createElement("div");
                 add.classList.add("container", "history-container");
@@ -48,15 +45,9 @@ window.onload = () => {
                 return add;
               };
 
-              transactionHistory.appendChild(
-                transactionFunction(
-                  `Date 29.02.3 (Prueba) , Total ${
-                    selectCrypto.value
-                  } = ${engineFunction()}`
-                )
-              );
+              transactionHistory.appendChild(transactionFunction(`Date 29.02.3 (Prueba) , Total ${selectCrypto.value} = ${engineFunction()}`));
             } else if (valueAmmount == false) {
-              alert("Enter ammount to buy");
+              alert("Enter ammount to buy crypto");
             } else {
               console.log("wrong");
             }
@@ -81,3 +72,4 @@ window.onload = () => {
   };
   addingListArray();
 };
+
