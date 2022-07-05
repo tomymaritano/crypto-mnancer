@@ -9,6 +9,7 @@
     </title>
     <link rel="stylesheet" href="css/mystyles.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="node_modules/@sweetalert2/theme-bulma/bulma.min.css">
   </head>
   <body>
     <nav
@@ -78,7 +79,7 @@
             <a class="navbar-item"> English </a>
             <a id="dolar" class="navbar-item"> USD </a>
             <a class="navbar-item js-modal-trigger" id="historial" data-target="modal-js-example"><i class="fa-solid fa-store"></i></a>
-            <a class="navbar-item"><i class="fa-solid fa-wallet"></i></a>
+            <a href="wallet.html" class="navbar-item"><i class="fa-solid fa-wallet"></i></a>
             <a class="navbar-item">
               <i class="fa-solid fa-moon"></i>
             </a>
@@ -97,7 +98,7 @@
     <section class="section is-fullwidth is-mobile">
       <div class="container mt-6">
         <div class="columns m-6">
-          <div class="column is-two-fifths">
+          <div class="column is-one-third">
             <div class="content">
               <h2 class="subtitle is-5 has-text-weight-bold">1. Select Currency</h2>
             </div>
@@ -172,8 +173,7 @@
             </form>
             <div class="column">
               <div class="content has-text-centered">
-                <h2 class="subtitle is-5 has-text-weight-bold">FAQ</h2>
-                <p class="is-size-7">Where can I see my history? Press the market icon on top. Located in the navbar</p>
+              <div id="chart-crypto"></div>  
               </div>              
           </div>
         </div>
@@ -297,6 +297,10 @@
       </div>
     </div>
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js" integrity="sha512-yhdujT21BI/kqk9gcupTh4jMwqLhb+gc6Ytgs4cL0BJjXW+Jo9QyllqLbuluI0cBHqV4XsR7US3lemEGjogQ0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/chart_crypto.js"></script>
+  <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
   <script src="navbar.js"></script>
   <script
     src="https://kit.fontawesome.com/5ac9c25f76.js"

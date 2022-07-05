@@ -31,7 +31,11 @@ window.onload = () => {
           const btnValidation = (btn) => {
             //Transaction
             if (valueAmmount > 0) {
-              this.btn = alert("Transaction complete! Taxes included.");
+              this.btn = Swal.fire(
+                'Transaction Complete!',
+                'Check history to get more info!',
+                'success'
+              )
               document.querySelector("#buyButton").addEventListener("click", () => { return transactionFunction(); });
 
               const transactionHistory = document.querySelector("#transactions-history");
@@ -47,7 +51,11 @@ window.onload = () => {
 
               transactionHistory.appendChild(transactionFunction(`Date 29.02.3 (Prueba) , Total ${selectCrypto.value} = ${engineFunction()}`));
             } else if (valueAmmount == false) {
-              alert("Enter ammount to buy crypto");
+              Swal.fire(
+                'Something is wrong!',
+                'Enter ammount!',
+                'error'
+              )
             } else {
               console.log("wrong");
             }
