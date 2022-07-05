@@ -136,7 +136,6 @@ const sortName = () => {
 const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);
 // console.log(totalCryptoValue);
 
-
 //Buying array
 const cryptoBuying = [];
 console.log(cryptoBuying);

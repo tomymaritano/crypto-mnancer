@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "@sweetalert2/theme-bulma": "^5.0.11",
+    "bulma-dashboard": "^0.3.2",
+    "bulma-quickview": "^2.0.0",
     "sweetalert2": "^11.4.19"
   },
   "keywords": []
