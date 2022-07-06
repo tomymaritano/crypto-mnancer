@@ -1,5 +1,5 @@
 
-  var optionsCrypto = {
+  let optionsCrypto = {
     series: [{
     name: 'USD',
     type: 'column',

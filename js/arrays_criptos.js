@@ -4,31 +4,31 @@ const cryptocurrencie = [
     name: "Bitcoin",
     id: 1,
     value: 19250,
-    mktvalue: 35.0,
+    mkt: 350000,
   },
   {
     name: "Etherum",
     id: 2,
     value: 1400,
-    mktvalue: 35.0,
+    mkt: 133046,
   },
   {
     name: "XPR",
     id: 3,
     value: 0.3,
-    mktvalue: 35.0,
+    mkt: 35.0,
   },
   {
     name: "Cardano",
     id: 4,
     value: 6.8,
-    mktvalue: 35.0,
+    mkt: 35.0,
   },
   {
     name: "LiteCoin",
     id: 5,
     value: 52,
-    mktvalue: 35.0,
+    mkt: 35.0,
   },
 ];
 
@@ -40,17 +40,17 @@ const cryptocurrencieClass = [];
 
 class Cryptos {
   static count = 5;
-  constructor(name, value, mktvalue) {
+  constructor(name, value, mkt) {
     this.name = name;
     this.id = ++this.constructor.count;
     this.value = value;
-    this.mktvalue = mktvalue;
+    this.mkt = mkt;
   }
 }
 
 cryptocurrencieClass.push(new Cryptos("LUNA", 2.3, 35.0));
-cryptocurrencieClass.push(new Cryptos("GMT", 0.9, 24.0));
-cryptocurrencieClass.push(new Cryptos("DogeCoin", 0.07, 24.0));
+cryptocurrencieClass.push(new Cryptos("GMT", 0.9, 22.0));
+cryptocurrencieClass.push(new Cryptos("DogeCoin", 0.07, 4.0));
 cryptocurrencieClass.push(new Cryptos("YFII", 0.2, 24.0));
 cryptocurrencieClass.push(new Cryptos("EOS", 30, 24.0));
 cryptocurrencieClass.push(new Cryptos("Tether", 0.9, 24.0));
@@ -92,6 +92,7 @@ const cryptocurrencieMap = cryptocurrencie.map((x) => {
     name: x.name,
     value: x.value,
     id: x.id,
+    mkt: x.mkt
   };
 });
 // console.log(cryptocurrencieMap);
@@ -106,36 +107,39 @@ const cryptocurrencieCopyMap = cryptocurrencieCopy.map((x) => {
     name: x.name,
     value: x.value,
     id: x.id,
+    mkt: x.mkt
   };
 });
 // console.log(cryptocurrencieCopyMap);
 
 //Concat array class and main array
 const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
-// console.log(cryptoConcat)
+console.log(cryptoConcat)
 
 //Sort by value
 const sortValue = () => {
-  cryptocurrencieMap.sort((a, b) =>
+  cryptoConcat.sort((a, b) =>
     a.value > b.value ? 1 : b.value > a.value ? -1 : 0
   );
-  return console.log(cryptocurrencieMap);
+  return console.log(cryptoConcat);
 };
-//sortValue();
+sortValue();
 
 //Sort by name
 const sortName = () => {
-  cryptocurrencieMap.sort((a, b) =>
+  cryptoConcat.sort((a, b) =>
     a.name > b.name ? 1 : b.name > a.name ? -1 : 0
   );
-  return console.log(cryptocurrencie);
+  return console.log(cryptoConcat);
 };
-//sortName();
+sortName();
+
 
 //Reduce method to get total USD ammount of crypto money
 const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);
 // console.log(totalCryptoValue);
 
-//Buying array
-const cryptoBuying = [];
-console.log(cryptoBuying);
+// //Buying array
+// const cryptoBuying = [];
+// console.log(cryptoBuying);
+
