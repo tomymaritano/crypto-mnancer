@@ -123,7 +123,7 @@ const sortValue = () => {
   );
   return console.log(cryptoConcat);
 };
-sortValue();
+// sortValue();
 
 //Sort by name
 const sortName = () => {
@@ -132,8 +132,8 @@ const sortName = () => {
   );
   return console.log(cryptoConcat);
 };
-sortName();
-
+// sortName();
+// 
 
 //Reduce method to get total USD ammount of crypto money
 const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);
