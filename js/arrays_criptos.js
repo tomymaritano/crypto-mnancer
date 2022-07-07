@@ -123,7 +123,15 @@ cryptocurrencieClass.push(new Cryptos("Santo FC", "SANTOS", 3.73, 16.97, 'Fan To
 
 
 
-
+//Money Format
+function moneyFormat(price, sign = '$') {
+  const pieces = parseFloat(price).toFixed(2).split('')
+  let ii = pieces.length - 3
+  while ((ii-=3) > 0) {
+    pieces.splice(ii, 0, ',')
+  }
+  return sign + pieces.join('')
+}
 
 // console.log(cryptocurrencie);
 // console.log(cryptocurrencie.length);

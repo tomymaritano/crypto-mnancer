@@ -18,7 +18,7 @@ window.onload = () => {
           
           for (const item of cryptoConcat) {
             if (item.name === selectedCrypto) {
-              return parseFloat(taxes(valueAmmount, iva(valueAmmount), item.value)).toFixed(3);
+              return parseFloat(taxes(valueAmmount, iva(valueAmmount), item.value)).toFixed(4);
             } else {}
           }
         };
@@ -49,7 +49,7 @@ window.onload = () => {
 
               // const sellFunction = () => {}
               let date = new Date()
-              transactionHistory.appendChild(transactionFunction(`${date.toLocaleString()} - You bought: ${selectCrypto.value} = ${engineFunction()}`));
+              transactionHistory.appendChild(transactionFunction(`Date : ${date.toLocaleString()} / ${selectCrypto.value} = ${engineFunction()}`));
             } else if (valueAmmount == false) {
               Swal.fire(
                 'Something is wrong!',

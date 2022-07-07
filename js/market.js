@@ -20,7 +20,7 @@ const marketList = () => {
     
             let columnValue = document.createElement('div')
                 columnValue.classList.add('column', 'has-text-weight-bold', );
-                columnValue.textContent = item.value;
+                columnValue.textContent = moneyFormat(item.value);
                 columns.appendChild(columnValue);
     
             let columnId = document.createElement('div')
@@ -30,7 +30,7 @@ const marketList = () => {
     
             let columnMkt = document.createElement('div')
                 columnMkt.classList.add('column');
-                columnMkt.textContent = item.mkt;
+                columnMkt.textContent = moneyFormat(item.mkt);
                 columns.appendChild(columnMkt);
         };
         columnsMarket() 
@@ -42,3 +42,4 @@ const marketList = () => {
 
 }
 marketList();
+
