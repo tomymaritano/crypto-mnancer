@@ -15,6 +15,7 @@ const inputNumber = (e) => {
 
 //IVA
 const iva = (x) => x * 0.21;
+
 const taxes = (a, b, c) => {
   return (a - b) / c;
 };

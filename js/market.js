@@ -9,12 +9,17 @@ const marketList = () => {
                 market.appendChild(columns);
     
             let columnName = document.createElement('div')
-                columnName.classList.add('column');
-                columnName.textContent = item.name;
+                columnName.classList.add('column', 'is-size-6', 'has-text-weight-bold' );
+                columnName.textContent = item.abbr;
                 columns.appendChild(columnName);
+
+            let span = document.createElement('span');
+                span.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light')
+                span.textContent = item.name;
+                columnName.appendChild(span);
     
             let columnValue = document.createElement('div')
-                columnValue.classList.add('column');
+                columnValue.classList.add('column', 'has-text-weight-bold', );
                 columnValue.textContent = item.value;
                 columns.appendChild(columnValue);
     

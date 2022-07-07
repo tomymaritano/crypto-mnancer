@@ -48,8 +48,8 @@ window.onload = () => {
               };
 
               // const sellFunction = () => {}
-
-              transactionHistory.appendChild(transactionFunction(`Date 29.02.3 (Prueba) , Total ${selectCrypto.value} = ${engineFunction()}`));
+              let date = new Date()
+              transactionHistory.appendChild(transactionFunction(`${date.toLocaleString()} - You bought: ${selectCrypto.value} = ${engineFunction()}`));
             } else if (valueAmmount == false) {
               Swal.fire(
                 'Something is wrong!',
