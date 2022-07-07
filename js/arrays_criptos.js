@@ -121,16 +121,16 @@ const sortValue = () => {
   cryptoConcat.sort((a, b) =>
     a.value > b.value ? 1 : b.value > a.value ? -1 : 0
   );
-  return console.log(cryptoConcat);
+  return cryptoConcat;
 };
 // sortValue();
 
 //Sort by name
-const sortName = () => {
+const sortName = (r) => {
   cryptoConcat.sort((a, b) =>
     a.name > b.name ? 1 : b.name > a.name ? -1 : 0
   );
-  return console.log(cryptoConcat);
+  return r;
 };
 // sortName();
 // 

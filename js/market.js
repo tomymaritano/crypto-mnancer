@@ -1,7 +1,6 @@
 let market = document.getElementById('market')
 console.log(market)
 
-
 const marketList = () => {
     for (const item of cryptoConcat) {
         const columnsMarket = () => {
@@ -31,5 +30,10 @@ const marketList = () => {
         };
         columnsMarket() 
     }
+    //     document.getElementById('clickname').onchange = () => {
+    //     return console.log('Hola')
+    // }; 
+
+
 }
 marketList();
