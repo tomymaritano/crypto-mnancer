@@ -10,11 +10,12 @@ const marketList = () => {
 
             let spanImg = document.createElement('span');
                 spanImg.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'addingImg', 'is-flex')
-            // let imageToSpan = document.createElement('img')
-            //     imageToSpan.src = prueba();
-            //     console.log(imageToSpan)
+            let imageToSpan = document.createElement('img')
+                imageToSpan.classList.add('poder')
+                imageToSpan.src = '';
+                
                 columns.appendChild(spanImg);
-                // spanImg.appendChild(imageToSpan);
+                spanImg.appendChild(imageToSpan);
 
                 
             
@@ -47,12 +48,7 @@ const marketList = () => {
                 columns.appendChild(columnMkt);
         };
         columnsMarket();
-
-
     }
-    //     document.getElementById('clickname').onchange = () => {
-    //     return console.log('Hola')
-    // }; 
 }
 marketList();
 

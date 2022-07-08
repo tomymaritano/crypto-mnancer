@@ -179,8 +179,9 @@ const cryptocurrencieCopyMap = cryptocurrencieCopy.map((x) => {
 const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
 // console.log(cryptoConcat);
 
-const cryptoConcatCopy = [...cryptoConcat]
-// console.log(cryptoConcatCopy)
+const cryptoConcatCopy = [...cryptoConcat];
+const cryptoConcatForIdMap = [...cryptoConcat];
+console.log(cryptoConcatCopy)
 
 //Sort by value
   cryptoConcatCopy.sort((a, b) => a.value > b.value ? 1 : b.value > a.value ? -1 : 0);
@@ -195,60 +196,35 @@ const cryptoConcatCopy = [...cryptoConcat]
 const totalCryptoValue = cryptoConcat.reduce((a, b) => a + b.value, 0);
 // console.log(totalCryptoValue);
 
-// //MAGIC
-// let imgString = [];
-// console.log(imgString);
-// let iterator = imgString.values();
-// console.log(imgString);
-
-// const magic = () => {
-//   for (let i = 0; i < cryptoConcat.length; i++) {
-//     let dir = '../img/icons/'
-//     const element = cryptoConcat[i].id;
-//     imgString.push(dir+element+'.svg')
-//   }
-// }
-// magic();
 
 
-//   const imageStringX = () => {
-//     for (const item of cryptoConcat) {
-//       // console.log(item.id)
-//       let comp = item.id;
-//       return comp
-//     }
-//   }
-//   imageStringX();
-
-//   const imageStringZ = () => {
-//     for (let i = 1; i < imgString.length; i++) {
-//       const element = [i++];
-//       return console.log(element)
-//     } 
-//   }
-//   imageStringZ();
-
-//   const r = () => {
-//     if (imageStringX() == imageStringZ()){ 
-//       return imgString[true] 
-//     }
-//   }
-// r();
 
 
-// const prueba = () => {
-//   for (const i of iterator) {
-//     while(true){
-//       if(imageStringX() === imageStringZ()) {
-//         return console.log()
-//       }
-//     }
-//     };
-//     }
 
 
-prueba();
-// if(imageStringX() != imageStringZ()) {
-//   while(true) {
-//     return console.log(i)
-//   }
+//SI EL ID DEL MAIN ARRAY ES IGUAL A LA POSICION DE LA FOTO RECORRELO TODO Y POR CADA UNO RETORNAME EL VALOR DE LA POSICION
+//ARRAY OF IMG
+let imgString = [];
+console.log(imgString);
+
+const magic = () => {
+  for (let i = 0; i < cryptoConcat.length; i++) {
+    let dir = '../img/icons/'
+    const element = cryptoConcat[i].id;
+    imgString.push(dir+element+'.svg')
+  }
+}
+magic();
+
+//MAP
+  const cryptoConcatCopyIdMap = cryptoConcat.map((x) => {
+    return {
+      id: x.id,
+    }
+  });
+  // console.log(cryptoConcatCopyIdMap)
+
+  imgString.forEach((num1, index) => {
+    const num2 = cryptoConcatCopyIdMap[index];
+    return console.log(num1);
+  });
