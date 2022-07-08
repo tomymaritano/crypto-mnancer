@@ -7990,3 +7990,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 #chart {
   max-width: 650px;
   margin: 35px auto; }
+
+.list-hoverable:hover {
+  background: rgba(243, 243, 243, 0.825);
+  transition: 1s; }
