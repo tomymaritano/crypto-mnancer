@@ -125,13 +125,13 @@ cryptocurrencieClass.push(new Cryptos("Santo FC", "SANTOS", 3.73, 1697, 'Fan Tok
 //STORAGE
 cryptocurrencieClass.push(new Cryptos("SONM", "SNM", 0.05, 2500000, 'Storage','../img/icons/cloak.svg'));
 cryptocurrencieClass.push(new Cryptos("Holo", "HOT", 0.002, 371000000, 'Storage','../img/icons/chips.svg'));
-cryptocurrencieClass.push(new Cryptos("SiaCoin", "SC", 3.73, 16.97, 'Storage','../img/icons/cdn.svg'));
+cryptocurrencieClass.push(new Cryptos("SiaCoin", "SC", 3.73, 1633333, 'Storage','../img/icons/cdn.svg'));
 cryptocurrencieClass.push(new Cryptos("RSK Infraestructure Network", "RIF", 0.05, 203000000, 'Storage','../img/icons/cc.svg'));
 cryptocurrencieClass.push(new Cryptos("Bluzelle", "BLZ", 0.091, 30000000, 'Storage','../img/icons/brd.svg'));
 cryptocurrencieClass.push(new Cryptos("Stacks", "STX", 0.040, 53667000, 'Storage','../img/icons/bnty.svg'));
 cryptocurrencieClass.push(new Cryptos("Storj", "STORJ", 0.76, 30410000, 'Storage','../img/icons/block.svg'));
 cryptocurrencieClass.push(new Cryptos("Prometeus", "PROM", 5.33, 87670000, 'Storage','../img/icons/beam.svg'));
-cryptocurrencieClass.push(new Cryptos("FileCoin", "FILE", 1324080000, 16.97, 'Storage','../img/icons/ast.svg'));
+cryptocurrencieClass.push(new Cryptos("FileCoin", "FILE", 16.95, 12312399, 'Storage','../img/icons/ast.svg'));
 
 
 
