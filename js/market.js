@@ -12,12 +12,10 @@ const marketList = () => {
                 spanImg.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'addingImg', 'is-flex')
             let imageToSpan = document.createElement('img')
                 imageToSpan.classList.add('poder')
-                imageToSpan.src = '';
-                
+                imageToSpan.src = item.img;
+                console.log(imageToSpan)
                 columns.appendChild(spanImg);
                 spanImg.appendChild(imageToSpan);
-
-                
             
             let addingImg = document.getElementsByClassName('addingImg');
                 addingImg.src
@@ -25,6 +23,7 @@ const marketList = () => {
             let columnName = document.createElement('div')
                 columnName.classList.add('column', 'is-size-6', 'has-text-weight-bold' );
                 columnName.textContent = item.abbr;
+                console.log(columnName.textContent)
                 columns.appendChild(columnName);
 
             let span = document.createElement('span');
