@@ -115,7 +115,7 @@ const marketList = () => {
                 columns.appendChild(columnName);
 
             let span = document.createElement('span');
-                span.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light')
+                span.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'is-hidden-mobile')
                 span.textContent = item.name;
                 columnName.appendChild(span);
     
@@ -125,7 +125,7 @@ const marketList = () => {
                 columns.appendChild(columnValue);
     
             let columnId = document.createElement('div')
-                columnId.classList.add('column');
+                columnId.classList.add('column', 'is-hidden-mobile');
                 columnId.textContent = item.id;
                 columns.appendChild(columnId);
     

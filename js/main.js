@@ -49,7 +49,10 @@ window.onload = () => {
 
               // const sellFunction = () => {}
               let date = new Date()
-              transactionHistory.appendChild(transactionFunction(`Date : ${date.toLocaleString()} / ${selectCrypto.value} = ${engineFunction()}`));
+              let idNumber = Math.floor((Math.random() * 1000) + 1) 
+              let tResult = transactionFunction(`Date : ${date.toLocaleString()} / ${selectCrypto.value} = ${engineFunction()} - TRANSACTION NUMBER ${idNumber}`);
+
+              transactionHistory.appendChild(tResult);
             } else if (valueAmmount == false) {
               Swal.fire(
                 'Something is wrong!',
@@ -79,5 +82,4 @@ window.onload = () => {
     }
   };
   addingListArray();
-};
-
+};  

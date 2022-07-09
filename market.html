@@ -99,7 +99,7 @@
             <div class="column has-text-right">
               <span class="icon-text">
                 <span class="icon">
-                  <i class="fa-solid fa-chart-pie"></i>
+                  <img src="img/pie-chart.png" alt="">
                 </span>
                 <span>Markets Overview</span>
               </span>
@@ -112,7 +112,15 @@
           <!--HIGHLIGHT COIN-->
 
             <div class="column m-3 simple-hover">
-              <h2 class="subtitle is-6 has-text-grey-light">Highlight Coin</h2>
+              <div class="content is-flex is-flex-direction-row is-justify-content-space-between">
+                <div>
+                  <h2 class="subtitle is-6 has-text-grey-light">Highlight Coin</h2>
+                </div>
+                <div class="is-hidden">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                </div>
+
+              </div>
               <div class="content">
                 <div class="columns is-mobile list-hoverable">
                   <div class="column">
@@ -150,7 +158,13 @@
             <!--NEW LISTING-->
 
             <div class="column m-3 simple-hover">
-              <h2 class="subtitle is-6 has-text-grey-light"> New Listing</h2>
+              <div class="content is-flex is-flex-direction-row is-justify-content-space-between">
+                <div>
+                  <h2 class="subtitle is-6 has-text-grey-light">New Listing</h2>
+                </div>
+                <div class="ai-over"><a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a></div>
+
+              </div>
               <div class="content">
                 <div class="columns is-mobile list-hoverable">
                   <div class="column">
@@ -185,7 +199,10 @@
               </div>
             </div>
             <div class="column m-3 simple-hover">
-              <h2 class="subtitle is-6 has-text-grey-light">Top Gainer Coin</h2>
+              <div class="content is-flex is-flex-direction-row is-justify-content-space-between">
+                <div><h2 class="subtitle is-6 has-text-grey-light">Top Gainer</h2></div>
+                <div class="ai-over"><a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a></div>
+              </div>
               <div class="content">
                 <div class="columns is-mobile list-hoverable">
                   <div class="column">
@@ -220,7 +237,11 @@
               </div>
             </div>
             <div class="column m-3 simple-hover">
-              <h2 class="subtitle is-6 has-text-grey-light">Top Volume Coin</h2>
+              <div class="content is-flex is-flex-direction-row is-justify-content-space-between">
+                <div><h2 class="subtitle is-6 has-text-grey-light">Top Volume Coin</h2></div>
+                <div class="ai-over"><a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a></div>
+
+              </div>
               <div class="content">
                 <div class="columns is-mobile list-hoverable">
                   <div class="column">
@@ -334,7 +355,7 @@
         </div>
       </div>
       <div id="market" class="container p-5">
-        <div class="columns is-mobile is-size-7 has-background-light">
+        <div class="columns is-mobile is-size-7 has-background-light is-flex is-align-self-auto">
           <div class="column">
             <span class="icon-text">
               <span>Name</span>
@@ -344,11 +365,11 @@
 
           <div class="column">
             <span id="pop-click" class="icon-text">
-              <span>24hs</span>
+              <span>Price</span>
               <span class="icon"><i class="fa-solid fa-arrows-up-down"></i></span>
             </span>
           </div>
-          <div class="column">
+          <div class="column is-hidden-mobile">
             <span id="pop-click" class="icon-text">
               <span>Popularty</span>
               <span class="icon"><i class="fa-solid fa-arrows-up-down"></i></span>
@@ -356,7 +377,7 @@
           </div>
           <div class="column">
             <span id="mkt-click" class="icon-text">
-              <span>Market Value</span>
+              <span>MktValue</span>
               <span class="icon"><i class="fa-solid fa-arrows-up-down"></i></span>
             </span>
           </div>

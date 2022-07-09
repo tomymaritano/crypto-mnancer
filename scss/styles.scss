@@ -33,6 +33,7 @@ $navbar-dropdown-arrow: $grey;
 $navbar-burger-color: $mnancer;
 
 
+
 //Breadcums
 .breadcrumb li a {
   color: rgb(78, 78, 78);
@@ -179,3 +180,8 @@ $navbar-burger-color: $mnancer;
   background: rgba(243, 243, 243, 0.825);
   transition: 1s;
 }
+
+.ai-over > a > i {
+  color: $mnancer;
+}
+

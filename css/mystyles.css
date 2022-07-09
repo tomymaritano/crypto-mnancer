@@ -7994,3 +7994,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .list-hoverable:hover {
   background: rgba(243, 243, 243, 0.825);
   transition: 1s; }
+
+.ai-over > a > i {
+  color: #f2c335; }

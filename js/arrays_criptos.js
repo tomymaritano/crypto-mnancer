@@ -189,7 +189,7 @@ const cryptoConcat = cryptocurrencieMap.concat(cryptocurrencieCopyMap);
 
 const cryptoConcatCopy = [...cryptoConcat];
 const cryptoConcatForIdMap = [...cryptoConcat];
-console.log(cryptoConcatCopy)
+// console.log(cryptoConcatCopy)
 
 //Sort by value
   cryptoConcatCopy.sort((a, b) => a.value > b.value ? 1 : b.value > a.value ? -1 : 0);
@@ -238,3 +238,10 @@ magic();
       return console.log(num1)
     })
   }
+
+
+// let stringify = JSON.stringify(cryptoConcat[1]);
+// console.log(stringify);
+
+// console.log(typeof cryptoConcat); // object
+// console.log(typeof stringify);
