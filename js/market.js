@@ -135,14 +135,6 @@ const marketList = () => {
                 columns.appendChild(columnMkt);
         };
         columnsMarket();
-            const metaverse = () => {
-                document.getElementById('metaverse').addEventListener('click', () => {
-                    cryptoJson.filterArray();
-                })   
-            };
-            metaverse();     
-
-
     };
 };
 marketList();

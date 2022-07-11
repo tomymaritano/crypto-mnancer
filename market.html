@@ -331,14 +331,16 @@
         </div>
         <div class="container">
           <nav
+          id="navtype"
+          method="POST"
             class="breadcrumb breadcrumb-big is-normal has-dot-separator"
             aria-label="breadcrumbs"
           >
             <ul>
               <li><a href="#">All</a></li>
-              <li><a href="#">Metaverse</a></li>
-              <li><a href="#">Gaming</a></li>
-              <li><a href="#">DeFi</a></li>
+              <li><a id="metaverse" href>Metaverse</a></li>
+              <li><a id="gaming" href="#">Gaming</a></li>
+              <li><a id="defi" href="#">DeFi</a></li>
               <li><a href="#">Innovation</a></li>
               <li><a href="#">Layer 1 / Layer 2</a></li>
               <li><a href="#">Fan Token</a></li>
@@ -484,6 +486,8 @@
     </footer>
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/axios.js"></script>
   <script src="navbar.js"></script>
   <script
     src="https://kit.fontawesome.com/5ac9c25f76.js"

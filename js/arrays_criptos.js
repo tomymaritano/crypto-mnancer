@@ -282,7 +282,6 @@ let cryptoJson = [
   }
 ];
 
-
 cryptoJson.push({ 'name': 'Clover Finance', 'abbr': 'CLV', 'id': 31, 'value': 0.09, 'mkt': 3066, 'type': 'POS', 'img': '../img/icons/iotx.svg' });
 cryptoJson.push({ 'name': 'Cocox BCX', 'abbr': 'COCOS', 'id': 32, 'value': 0.923, 'mkt': 3066231, 'type': 'POS', 'img': '../img/icons/kcs.svg' });
 cryptoJson.push({ 'name': 'Shentu', 'abbr': 'CTK', 'id': 33, 'value': 19, 'mkt': 30663123, 'type': 'POS', 'img': '../img/icons/kin.svg' });
@@ -293,24 +292,21 @@ cryptoJson.push({ 'name': 'DIA', 'abbr': 'DIA', 'id': 37, 'value': 0.09, 'mkt': 
 cryptoJson.push({ 'name': 'Polkdat', 'abbr': 'DOT', 'id': 38, 'value': 0.09, 'mkt': 30663123, 'type': 'POS', 'img': '../img/icons/maid.svg' });
 cryptoJson.push({ 'name': 'AC MILAN', 'abbr': 'ACM', 'id': 39, 'value': 0.09, 'mkt': 3123066, 'type': 'Metaverse', 'img': '../img/icons/wabi.svg' });
 cryptoJson.push({ 'name': 'Alpine', 'abbr': 'F1 ALpine', 'id': 40, 'value': 0.09, 'mkt': 23213066, 'type': 'POS', 'img': '../img/icons/waves.svg' });
-cryptoJson.push({ 'name': 'AS ROMA', 'abbr': 'ASR', 'id': 41, 'value': 0.09, 'mkt': 113066, 'type': 'POS', 'img': '../img/icons/vtc.svg' });
-cryptoJson.push({ 'name': 'Atletico Madrid', 'abbr': 'ATM', 'id': 42, 'value': 0.09, 'mkt': 12066, 'type': 'POS', 'img': '../img/icons/xrp.svg' });
-cryptoJson.push({ 'name': 'FC Barcelona', 'abbr': 'BAR', 'id': 43, 'value': 0.09, 'mkt': 993066, 'type': 'POS', 'img': '../img/icons/vivo.svg' });
-
-
-//Order by type
-
-
+cryptoJson.push({ 'name': 'AS ROMA', 'abbr': 'ASR', 'id': 41, 'value': 0.09, 'mkt': 113066, 'type': 'POS', 'img': '../img/icons/vivo.svg' });
+cryptoJson.push({ 'name': 'Atletico Madrid', 'abbr': 'ATM', 'id': 42, 'value': 0.09, 'mkt': 12066, 'type': 'EOS', 'img': '../img/icons/xrp.svg' });
+cryptoJson.push({ 'name': 'FC Barcelona', 'abbr': 'BAR', 'id': 43, 'value': 0.09, 'mkt': 993066, 'type': 'EOS', 'img': '../img/icons/vivo.svg' });
 
 localStorage.setItem('cryptoList', JSON.stringify(cryptoJson));
 
 let restoredSession = JSON.parse(localStorage.getItem('cryptoList'));
 console.log(restoredSession);
 
-
-const filterArray = cryptoJson.filter(e =>  e.type == 'Metaverse');
+const filterArray = cryptoJson.filter(x =>  x.type === 'POS');
 console.log(filterArray);
-  
+
+//Buy array;
+const buyArray = [];
+console.log(buyArray)
 
 //Money Format
 const moneyFormat = (price, sign = '$') => {
@@ -318,7 +314,7 @@ const moneyFormat = (price, sign = '$') => {
   let ii = pieces.length - 3
   while ((ii-=3) > 0) {
     pieces.splice(ii, 0, ',')
-  }
+  };
   return sign + pieces.join('')
 };
 
@@ -331,7 +327,7 @@ const magic = () => {
     let dir = '../img/icons/'
     const element = cryptoJson[i].id;
     imgString.push(dir+element+'.svg')
-  }
+  };
 };
 
 magic();
@@ -340,5 +336,5 @@ const test = () => {
   imgString.forEach((num1, index) => {
     const num2 = cryptoJson[index];
     return console.log(num1)
-  })
+  });
 };
