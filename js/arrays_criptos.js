@@ -268,7 +268,7 @@ let cryptoJson = [
       "id": 31,
       "value": 1.4,
       "mkt": 4925,
-      "type": ["POS"],
+      "type": ["Metaverse"],
       "img": "img/icons/ilk.svg"
   },
   {
@@ -277,7 +277,7 @@ let cryptoJson = [
       "id": 32,
       "value": 0.0,
       "mkt": 934943,
-      "type": ["POS"],
+      "type": ["Metaverse"],
       "img": 'img/icons/ion.svg'
   }
 ];
@@ -291,25 +291,26 @@ cryptoJson.push({ 'name': 'Dash', 'abbr': 'DASH', 'id': 35, 'value': 43, 'mkt': 
 cryptoJson.push({ 'name': 'Decred', 'abbr': 'DCR', 'id': 36, 'value': 23, 'mkt': 23123, 'type': 'POS', 'img': '../img/icons/link.svg' });
 cryptoJson.push({ 'name': 'DIA', 'abbr': 'DIA', 'id': 37, 'value': 0.09, 'mkt': 42321123, 'type': 'POS', 'img': '../img/icons/loom.svg' });
 cryptoJson.push({ 'name': 'Polkdat', 'abbr': 'DOT', 'id': 38, 'value': 0.09, 'mkt': 30663123, 'type': 'POS', 'img': '../img/icons/maid.svg' });
-cryptoJson.push({ 'name': 'AC MILAN', 'abbr': 'ACM', 'id': 39, 'value': 0.09, 'mkt': 3123066, 'type': 'POS', 'img': '../img/icons/wabi.svg' });
+cryptoJson.push({ 'name': 'AC MILAN', 'abbr': 'ACM', 'id': 39, 'value': 0.09, 'mkt': 3123066, 'type': 'Metaverse', 'img': '../img/icons/wabi.svg' });
 cryptoJson.push({ 'name': 'Alpine', 'abbr': 'F1 ALpine', 'id': 40, 'value': 0.09, 'mkt': 23213066, 'type': 'POS', 'img': '../img/icons/waves.svg' });
 cryptoJson.push({ 'name': 'AS ROMA', 'abbr': 'ASR', 'id': 41, 'value': 0.09, 'mkt': 113066, 'type': 'POS', 'img': '../img/icons/vtc.svg' });
 cryptoJson.push({ 'name': 'Atletico Madrid', 'abbr': 'ATM', 'id': 42, 'value': 0.09, 'mkt': 12066, 'type': 'POS', 'img': '../img/icons/xrp.svg' });
 cryptoJson.push({ 'name': 'FC Barcelona', 'abbr': 'BAR', 'id': 43, 'value': 0.09, 'mkt': 993066, 'type': 'POS', 'img': '../img/icons/vivo.svg' });
 
-  
-  // Convirte el JSON string con JSON.stringify()
-  // entonces guarda con localStorage con el nombre de la sesión
-  localStorage.setItem('localInfo', JSON.stringify(cryptoJson));
-  
-  // Ejemplo de como transformar el String generado usando
-  // JSON.stringify() y guardándolo en localStorage como objeto JSON otra vez
-  var restoredSession = JSON.parse(localStorage.getItem('localInfo'));
-  
-  // Ahora la variable restoredSession contiene el objeto que fue guardado
-  // en localStorage
-  console.log(restoredSession);
 
+//Order by type
+
+
+
+localStorage.setItem('cryptoList', JSON.stringify(cryptoJson));
+
+let restoredSession = JSON.parse(localStorage.getItem('cryptoList'));
+console.log(restoredSession);
+
+
+const filterArray = cryptoJson.filter(e =>  e.type == 'Metaverse');
+console.log(filterArray);
+  
 
 //Money Format
 const moneyFormat = (price, sign = '$') => {

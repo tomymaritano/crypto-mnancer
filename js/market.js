@@ -1,4 +1,4 @@
-//UP MENU
+//UPMENU
 
 const highlight = () => {
     //BTC
@@ -6,7 +6,6 @@ const highlight = () => {
     document.getElementById('span-bitcoin').textContent = cryptoJson[0].abbr;
     document.querySelector('.btc-highlight-value').textContent = cryptoJson[0].value;
     document.querySelector('.btc-highlight-mkt').textContent = moneyFormat(cryptoJson[0].mkt);
-    console.log(cryptoJson[0].img)
 
     //ETC
     document.getElementById('etc-img').src = cryptoJson[1].img;
@@ -19,7 +18,7 @@ const highlight = () => {
     document.getElementById('span-xpr').textContent = cryptoJson[2].name;
     document.querySelector('.xpr-highlight-value').textContent = cryptoJson[2].value;
     document.querySelector('.xpr-highlight-mkt').textContent = moneyFormat(cryptoJson[2].mkt);
-}
+};
 highlight();
 
 const newListing = () => {
@@ -40,7 +39,7 @@ const newListing = () => {
     document.getElementById('span-ape').textContent = cryptoJson[6].abbr;
     document.querySelector('.ape-highlight-value').textContent = cryptoJson[6].value;
     document.querySelector('.ape-highlight-mkt').textContent = moneyFormat(cryptoJson[6].mkt);
-}
+};
 newListing();
 
 const topGainerCoin = () => {
@@ -61,7 +60,7 @@ const topGainerCoin = () => {
     document.getElementById('span-rare').textContent = cryptoJson[9].abbr;
     document.querySelector('.rare-highlight-value').textContent = cryptoJson[9].value;
     document.querySelector('.rare-highlight-mkt').textContent = moneyFormat(cryptoJson[9].mkt);
-}
+};
 topGainerCoin();
 
 const topVolumeCoin = () => {
@@ -82,7 +81,7 @@ const topVolumeCoin = () => {
     document.getElementById('span-ardr').textContent = cryptoJson[27].abbr;
     document.querySelector('.ardr-highlight-value').textContent = cryptoJson[27].value;
     document.querySelector('.ardr-highlight-mkt').textContent = moneyFormat(cryptoJson[27].mkt);
-}
+};
 topVolumeCoin();
 
 
@@ -136,7 +135,14 @@ const marketList = () => {
                 columns.appendChild(columnMkt);
         };
         columnsMarket();
-    }
-}
-marketList();
+            const metaverse = () => {
+                document.getElementById('metaverse').addEventListener('click', () => {
+                    cryptoJson.filterArray();
+                })   
+            };
+            metaverse();     
 
+
+    };
+};
+marketList();
