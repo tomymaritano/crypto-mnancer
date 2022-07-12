@@ -89,52 +89,52 @@ topVolumeCoin();
 let market = document.getElementById('market')
 // console.log(market)
 
-const marketList = () => {
-    for (const item of cryptoJson) {
-        const columnsMarket = () => {
-            const columns = document.createElement('div');
-                columns.classList.add('columns', 'border-bottom', 'is-mobile', 'is-size-7')
-                market.appendChild(columns);
+// const marketList = () => {
+//     for (const item of cryptoJson) {
+//         const columnsMarket = () => {
+//             const columns = document.createElement('div');
+//                 columns.classList.add('columns', 'border-bottom', 'is-mobile', 'is-size-7')
+//                 market.appendChild(columns);
 
-            let spanImg = document.createElement('span');
-                spanImg.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'addingImg', 'is-flex')
-            let imageToSpan = document.createElement('img')
-                imageToSpan.classList.add('poder')
-                imageToSpan.src = item.img;
+//             let spanImg = document.createElement('span');
+//                 spanImg.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'addingImg', 'is-flex')
+//             let imageToSpan = document.createElement('img')
+//                 imageToSpan.classList.add('poder')
+//                 imageToSpan.src = item.img;
 
-                columns.appendChild(spanImg);
-                spanImg.appendChild(imageToSpan);
+//                 columns.appendChild(spanImg);
+//                 spanImg.appendChild(imageToSpan);
             
-            let addingImg = document.getElementsByClassName('addingImg');
-                addingImg.src
+//             let addingImg = document.getElementsByClassName('addingImg');
+//                 addingImg.src
     
-            let columnName = document.createElement('div')
-                columnName.classList.add('column', 'is-size-6', 'has-text-weight-bold' );
-                columnName.textContent = item.abbr;
-                // console.log(columnName.textContent)
-                columns.appendChild(columnName);
+//             let columnName = document.createElement('div')
+//                 columnName.classList.add('column', 'is-size-6', 'has-text-weight-bold' );
+//                 columnName.textContent = item.abbr;
+//                 // console.log(columnName.textContent)
+//                 columns.appendChild(columnName);
 
-            let span = document.createElement('span');
-                span.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'is-hidden-mobile')
-                span.textContent = item.name;
-                columnName.appendChild(span);
+//             let span = document.createElement('span');
+//                 span.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'is-hidden-mobile')
+//                 span.textContent = item.name;
+//                 columnName.appendChild(span);
     
-            let columnValue = document.createElement('div')
-                columnValue.classList.add('column', 'has-text-weight-bold', );
-                columnValue.textContent = moneyFormat(item.value);
-                columns.appendChild(columnValue);
+//             let columnValue = document.createElement('div')
+//                 columnValue.classList.add('column', 'has-text-weight-bold', );
+//                 columnValue.textContent = moneyFormat(item.value);
+//                 columns.appendChild(columnValue);
     
-            let columnId = document.createElement('div')
-                columnId.classList.add('column', 'is-hidden-mobile');
-                columnId.textContent = item.id;
-                columns.appendChild(columnId);
+//             let columnId = document.createElement('div')
+//                 columnId.classList.add('column', 'is-hidden-mobile');
+//                 columnId.textContent = item.id;
+//                 columns.appendChild(columnId);
     
-            let columnMkt = document.createElement('div')
-                columnMkt.classList.add('column', 'has-text-weight-bold');
-                columnMkt.textContent = moneyFormat(item.mkt);
-                columns.appendChild(columnMkt);
-        };
-        columnsMarket();
-    };
-};
-marketList();
+//             let columnMkt = document.createElement('div')
+//                 columnMkt.classList.add('column', 'has-text-weight-bold');
+//                 columnMkt.textContent = moneyFormat(item.mkt);
+//                 columns.appendChild(columnMkt);
+//         };
+//         columnsMarket();
+//     };
+// };
+// marketList();

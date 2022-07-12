@@ -299,14 +299,10 @@ cryptoJson.push({ 'name': 'FC Barcelona', 'abbr': 'BAR', 'id': 43, 'value': 0.09
 localStorage.setItem('cryptoList', JSON.stringify(cryptoJson));
 
 let restoredSession = JSON.parse(localStorage.getItem('cryptoList'));
-console.log(restoredSession);
+// console.log(restoredSession);
 
 const filterArray = cryptoJson.filter(x =>  x.type === 'POS');
-console.log(filterArray);
-
-//Buy array;
-const buyArray = [];
-console.log(buyArray)
+// console.log(filterArray);
 
 //Money Format
 const moneyFormat = (price, sign = '$') => {
