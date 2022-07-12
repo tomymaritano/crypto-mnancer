@@ -85,56 +85,69 @@ const topVolumeCoin = () => {
 topVolumeCoin();
 
 
-//
-let market = document.getElementById('market')
-// console.log(market)
 
-// const marketList = () => {
-//     for (const item of cryptoJson) {
-//         const columnsMarket = () => {
-//             const columns = document.createElement('div');
-//                 columns.classList.add('columns', 'border-bottom', 'is-mobile', 'is-size-7')
-//                 market.appendChild(columns);
 
-//             let spanImg = document.createElement('span');
-//                 spanImg.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'addingImg', 'is-flex')
-//             let imageToSpan = document.createElement('img')
-//                 imageToSpan.classList.add('poder')
-//                 imageToSpan.src = item.img;
+const criptoAPI = async() => {
+    try {
+        const rsp = await fetch('https://rest.coinapi.io/v1/assets/?apikey=2AE402E0-488B-408E-9757-A3C45476CE8B')
+        console.log(rsp);
 
-//                 columns.appendChild(spanImg);
-//                 spanImg.appendChild(imageToSpan);
-            
-//             let addingImg = document.getElementsByClassName('addingImg');
-//                 addingImg.src
-    
-//             let columnName = document.createElement('div')
-//                 columnName.classList.add('column', 'is-size-6', 'has-text-weight-bold' );
-//                 columnName.textContent = item.abbr;
-//                 // console.log(columnName.textContent)
-//                 columns.appendChild(columnName);
+        const rsp2 = await fetch('https://rest.coinapi.io/v1/assets/icons/64x64/?apikey=2AE402E0-488B-408E-9757-A3C45476CE8B')
+        console.log(rsp2);
 
-//             let span = document.createElement('span');
-//                 span.classList.add('pl-3', 'is-size-7', 'has-text-dark', 'has-text-weight-light', 'is-hidden-mobile')
-//                 span.textContent = item.name;
-//                 columnName.appendChild(span);
-    
-//             let columnValue = document.createElement('div')
-//                 columnValue.classList.add('column', 'has-text-weight-bold', );
-//                 columnValue.textContent = moneyFormat(item.value);
-//                 columns.appendChild(columnValue);
-    
-//             let columnId = document.createElement('div')
-//                 columnId.classList.add('column', 'is-hidden-mobile');
-//                 columnId.textContent = item.id;
-//                 columns.appendChild(columnId);
-    
-//             let columnMkt = document.createElement('div')
-//                 columnMkt.classList.add('column', 'has-text-weight-bold');
-//                 columnMkt.textContent = moneyFormat(item.mkt);
-//                 columns.appendChild(columnMkt);
-//         };
-//         columnsMarket();
-//     };
-// };
-// marketList();
+        if(rsp.status === 200) {
+            const data = await rsp.json();
+            const data2 = await rsp2.json()
+            console.log(data);
+            console.log(data2)
+//             asset_id: "USD"
+// data_end: "2022-07-10"
+// data_orderbook_end: "2022-07-10T00:00:00.0000000Z"
+// data_orderbook_start: "2014-02-24T17:43:05.0000000Z"
+// data_quote_end: "2022-07-10T00:00:00.0000000Z"
+// data_quote_start: "2014-02-24T17:43:05.0000000Z"
+// data_start: "2010-07-17"
+// data_symbols_count: 123348
+// data_trade_end: "2022-07-10T00:00:00.0000000Z"
+// data_trade_start: "2010-07-17T23:09:17.0000000Z"
+// id_icon: "0a4185f2-1a03-4a7c-b866-ba7076d8c73b"
+// name: "US Dollar"
+// type_is_crypto: 0
+// volume_1day_usd: 14880810299575.45
+// volume_1hrs_usd: 546088866134.67
+// volume_1mth_usd: 640403318621349.6
+
+            let cryptos = []
+            data.forEach(item => {
+                // console.log(item.response)
+                cryptos += `
+                    <div class="columns is-flex border-bottom is-mobile">
+                            <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
+                            align-items-center is-flex-direction-column is-hidden-mobile"><img src=""></span>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex">
+                        ${item.asset_id}
+                        <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
+                        align-items-center is-flex-direction-column is-hidden-mobile">${item.name}</span>
+                        </div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${moneyFormat(item.price_usd)}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.volume_1hrs_usd}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volume_1day_usd}</div>
+                    </div>
+                `
+            });
+            let testing = document.getElementById('testing')
+            testing.innerHTML = cryptos;
+
+        } else if (rsp === 401){
+            console.log('Error 401');
+        } else if (rsp === 404) {
+            console.log('Error 404');
+        } else {
+            console.log('Wrong ERROR');
+        }
+    }catch(error) {
+        console.log(error);
+    };
+};
+
+criptoAPI();
