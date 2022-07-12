@@ -1,31 +1,30 @@
 const criptoAPI = async() => {
     try {
-        const rsp = await fetch('https://fcsapi.com/api-v3/crypto/supply?sort=rank&order=ASC&limit=50&access_key=AdwRv3RwS56tV0PPSoyD8')
+        const rsp = await fetch('https://api.coincap.io/v2/assets')
         console.log(rsp);
 
         if(rsp.status === 200) {
             const data = await rsp.json();
-            console.log(data.response);
+            console.log(data.data);
 
             let cryptos = []
-            data.response.forEach(item => {
+            data.data.forEach(item => {
                 // console.log(item.response)
                 cryptos += `
-                    <div class="columns is-flex">
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6 is-flex">
-                        ${item.name}
+                    <div class="columns is-flex border-bottom is-mobile">
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex">
+                        ${item.symbol}
                         <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
-                        align-items-center is-flex-direction-column">${item.symbol}</span>
+                        align-items-center is-flex-direction-column is-hidden-mobile">${item.name}</span>
                         </div>
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6">${item.rank}</div>
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6">${item.quote.USD.price}</div>
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6">${item.update}</div>
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6">${item.quote.USD.percentage_change_1h}</div>
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6">${item.quote.USD.percentage_change_7d}</div>
-                        <div class="column list-negative-afirmative border-bottom is-mobile is-size-6">${item.quote.USD.percentage_change_24h}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${moneyFormat(item.priceUsd)}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.changePercent24Hr}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volumeUsd24Hr}</div>
+
                     </div>
                 `
             });
+
             let testing = document.getElementById('testing')
             testing.innerHTML = cryptos;
 
