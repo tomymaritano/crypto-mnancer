@@ -15,3 +15,13 @@ const visaFee = (x) => {
   x * 0.18;
 };
 
+const changeToggle = () => {
+  let x = document.body
+  console.log(x)
+  x.classList.toggle('dark-mode')
+};
+
+const toggleEvent = () => {
+  document.getElementById('color-toggle').addEventListener('click', () => changeToggle())
+};
+toggleEvent();

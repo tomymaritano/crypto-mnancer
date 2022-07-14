@@ -182,3 +182,56 @@ $navbar-burger-color: $mnancer;
 .ai-over > a > i {
   color: $mnancer;
 };
+
+.dark-mode {
+  background-color: #181A1F;
+  p {
+    color: white;
+  };
+  h1, h2, h3{
+    color: white;
+  };
+  section {
+    background-color: #181A1F !important;
+  };
+  footer {
+    background-color: #181A1F !important;
+    color: white;
+  };
+  .card {
+    background: #0A0E12 ;
+  }
+  i {
+    color: white;
+  };
+  nav {
+    background-color: #181A1F;
+    color: white;
+  } nav > a {
+    color: white !important;
+  };
+  #navbarBasicExample > a{ 
+    color: white !important;
+  };
+  span {
+    color: white !important;
+  };
+  #main-section {
+    background-color: #0A0E12 !important;
+  }
+  #start-earning-today {
+    background-color: #0A0E12 !important;
+    color: white;
+  };
+  #markets {
+    background-color: #0A0E12 !important;
+    color: white;
+  };
+  #market-toggle > .column {
+    background-color: #0A0E12;
+  }
+  #all-cryptos {
+    background-color: #181A1F !important;
+    color: white;
+  };
+}

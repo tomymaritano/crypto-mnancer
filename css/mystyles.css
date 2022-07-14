@@ -7997,3 +7997,41 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .ai-over > a > i {
   color: #f2c335; }
+
+.dark-mode {
+  background-color: #181A1F; }
+  .dark-mode p {
+    color: white; }
+  .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: white; }
+  .dark-mode section {
+    background-color: #181A1F !important; }
+  .dark-mode footer {
+    background-color: #181A1F !important;
+    color: white; }
+  .dark-mode .card {
+    background: #0A0E12; }
+  .dark-mode i {
+    color: white; }
+  .dark-mode nav {
+    background-color: #181A1F;
+    color: white; }
+  .dark-mode nav > a {
+    color: white !important; }
+  .dark-mode #navbarBasicExample > a {
+    color: white !important; }
+  .dark-mode span {
+    color: white !important; }
+  .dark-mode #main-section {
+    background-color: #0A0E12 !important; }
+  .dark-mode #start-earning-today {
+    background-color: #0A0E12 !important;
+    color: white; }
+  .dark-mode #markets {
+    background-color: #0A0E12 !important;
+    color: white; }
+  .dark-mode #market-toggle > .column {
+    background-color: #0A0E12; }
+  .dark-mode #all-cryptos {
+    background-color: #181A1F !important;
+    color: white; }

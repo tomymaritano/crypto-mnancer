@@ -15,7 +15,7 @@
   <body>
     <nav
       id="navbar"
-      class="navbar is-transparent has-shadow"
+      class="navbar is-transparent"
       role="navigation"
       aria-label="main navigation"
     >
@@ -36,7 +36,7 @@
     </nav>
     <nav
     id="navbar"
-    class="navbar is-transparent has-shadow"
+    class="navbar is-transparent"
     role="navigation"
     aria-label="main navigation"
   >
@@ -100,16 +100,16 @@
         <div class="navbar-item">
           <a class="navbar-item"> English </a>
           <a class="navbar-item"> USD </a>
-          <a class="navbar-item">
+          <a id="color-toggle" class="navbar-item">
             <i class="fa-solid fa-moon"></i>
-          </a>
+        </a>
         </div>
       </div>
     </div>
   </nav>
     <!--Sections-->
 
-    <section class="section markets has-background-light">
+    <section id="markets" class="section markets has-background-light">
       <div class="container">
         <div class="content">
           <div class="columns is-mobile">
@@ -299,7 +299,7 @@
         </div>
       </div>
     </section>
-    <section class="section has-background-white">
+    <section id="all-cryptos" class="section has-background-white">
       <div class="container p-5">
         <div class="columns">
           <div class="column is-two-thirds">
@@ -377,7 +377,7 @@
         </div>
       </div>
       <div id="market" class="container p-5">
-        <div class="columns is-mobile is-size-7 has-background-light is-flex is-align-self-auto">
+        <div id="market-toggle" class="columns is-mobile is-size-7 has-background-light is-flex is-align-self-auto">
           <div class="column">
             <span class="icon-text">
               <span>Name</span>
@@ -525,7 +525,7 @@
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="js/axios.js"></script>
+  <script src="js/functions.js"></script>
   <script src="navbar.js"></script>
   <script
     src="https://kit.fontawesome.com/5ac9c25f76.js"

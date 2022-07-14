@@ -89,17 +89,12 @@ topVolumeCoin();
 
 const criptoAPI = async() => {
     try {
-        const rsp = await fetch('https://rest.coinapi.io/v1/assets/?apikey=2AE402E0-488B-408E-9757-A3C45476CE8B')
+        const rsp = await fetch('https://api.coincap.io/v2/assets')
         console.log(rsp);
-
-        const rsp2 = await fetch('https://rest.coinapi.io/v1/assets/icons/64x64/?apikey=2AE402E0-488B-408E-9757-A3C45476CE8B')
-        console.log(rsp2);
 
         if(rsp.status === 200) {
             const data = await rsp.json();
-            const data2 = await rsp2.json()
             console.log(data);
-            console.log(data2)
 //             asset_id: "USD"
 // data_end: "2022-07-10"
 // data_orderbook_end: "2022-07-10T00:00:00.0000000Z"
@@ -118,20 +113,20 @@ const criptoAPI = async() => {
 // volume_1mth_usd: 640403318621349.6
 
             let cryptos = []
-            data.forEach(item => {
+            data.data.forEach(item => {
                 // console.log(item.response)
                 cryptos += `
                     <div class="columns is-flex border-bottom is-mobile">
                             <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
                             align-items-center is-flex-direction-column is-hidden-mobile"><img src=""></span>
                         <div class="column list-negative-afirmative is-mobile is-size-6 is-flex">
-                        ${item.asset_id}
+                        ${item.symbol}
                         <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
                         align-items-center is-flex-direction-column is-hidden-mobile">${item.name}</span>
                         </div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${moneyFormat(item.price_usd)}</div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.volume_1hrs_usd}</div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volume_1day_usd}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${moneyFormat(item.priceUsd)}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.changePercent24Hr}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volumeUsd24Hr}</div>
                     </div>
                 `
             });
