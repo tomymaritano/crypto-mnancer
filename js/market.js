@@ -1,44 +1,96 @@
-//UPMENU
+
+
+
+
+const criptoAPI = async() => {
+    try {
+        const rsp = await fetch('https://api.coincap.io/v2/assets')
+        console.log(rsp);
+
+        if(rsp.status === 200) {
+            const data = await rsp.json();
+            console.log(data);
+
+            let cryptos = []
+            data.data.forEach(item => {
+                // console.log(item.response)
+                cryptos += `
+                    <div class="columns is-flex border-bottom is-mobile">
+                            <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
+                            align-items-center is-flex-direction-column is-hidden-mobile"><img src=""></span>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex">
+                        ${item.symbol}
+                        <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
+                        align-items-center is-flex-direction-column is-hidden-mobile">${item.name}</span>
+                        </div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 "><strong>${moneyFormat(item.priceUsd)}</strong></div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.changePercent24Hr}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volumeUsd24Hr}</div>
+                    </div>
+                `
+            });
+            let testing = document.getElementById('testing')
+            testing.innerHTML = cryptos;
+
+            const marketTopNavbar = () => {
+                let navbar = document.getElementById('top-nav-market');
+                for (const i of data.data) {
+                    // console.log(i.id)
+                    if (i.rank === '70') {
+                        let add = `        
+                        <div class="content">
+                        <div class="columns is-flex-direction-row m-2">
+                          <div class="column is-flex"><span class="pr-4"><strong>${i.name}</strong></span><p class="pr-2">Price</p><span class="span"><strong>${moneyFormat(i.priceUsd)}</strong></span></div>
+                          <div class="column is-flex"><p class="pr-2">Exchange</p><span class="span percent"><strong>${moneyComparative(i.changePercent24Hr)}</strong></span></div>
+                          <div class="column is-flex"><p class="pr-2">Supply</p><span class="span"><strong>${i.supply}</strong></span></div>
+                          <div class="column is-flex"><p class="pr-2">Rank</p><span><strong>${i.rank}</strong></span></div>            
+                        </div>
+                      </div>`
+                        console.log(navbar);
+                        navbar.innerHTML = add;
+                    }else{}
+
+                    //UPMENU
 
 const highlight = () => {
     //BTC
-    document.getElementById('btc-img').src = cryptoJson[0].img;
-    document.getElementById('span-bitcoin').textContent = cryptoJson[0].abbr;
-    document.querySelector('.btc-highlight-value').textContent = cryptoJson[0].value;
-    document.querySelector('.btc-highlight-mkt').textContent = moneyFormat(cryptoJson[0].mkt);
+    document.getElementById('btc-img').src = cryptoJson[0].img
+    document.getElementById('span-bitcoin').textContent = data.data[0].name;
+    document.querySelector('.btc-highlight-value').textContent = moneyFormat(data.data[0].priceUsd);
+    document.querySelector('.btc-highlight-mkt').textContent = moneyFormat(data.data[0].supply);
 
     //ETC
-    document.getElementById('etc-img').src = cryptoJson[1].img;
-    document.getElementById('span-ether').textContent = cryptoJson[1].abbr;
-    document.querySelector('.etc-highlight-value').textContent = cryptoJson[1].value;
-    document.querySelector('.etc-highlight-mkt').textContent = moneyFormat(cryptoJson[1].mkt);
+    document.getElementById('etc-img').src = cryptoJson[1].img
+    document.getElementById('span-ether').textContent = data.data[1].name;
+    document.querySelector('.etc-highlight-value').textContent = moneyFormat(data.data[1].priceUsd);
+    document.querySelector('.etc-highlight-mkt').textContent = moneyFormat(data.data[1].supply)
 
     //XPRR
     document.getElementById('xpr-img').src = cryptoJson[2].img;
-    document.getElementById('span-xpr').textContent = cryptoJson[2].name;
-    document.querySelector('.xpr-highlight-value').textContent = cryptoJson[2].value;
-    document.querySelector('.xpr-highlight-mkt').textContent = moneyFormat(cryptoJson[2].mkt);
+    document.getElementById('span-xpr').textContent = data.data[2].name
+    document.querySelector('.xpr-highlight-value').textContent = moneyFormat(data.data[2].priceUsd)
+    document.querySelector('.xpr-highlight-mkt').textContent = moneyFormat(data.data[2].supply)
 };
 highlight();
 
 const newListing = () => {
     //LTC
     document.getElementById('ltc-img').src = cryptoJson[5].img;
-    document.getElementById('span-ltc').textContent = cryptoJson[5].abbr;
-    document.querySelector('.ltc-highlight-value').textContent = cryptoJson[5].value;
-    document.querySelector('.ltc-highlight-mkt').textContent = moneyFormat(cryptoJson[5].mkt);
+    document.getElementById('span-ltc').textContent = data.data[3].symbol
+    document.querySelector('.ltc-highlight-value').textContent = moneyFormat(data.data[3].priceUsd)
+    document.querySelector('.ltc-highlight-mkt').textContent = moneyFormat(data.data[3].supply)
 
-    //ETC
+    //kETC
     document.getElementById('ada-img').src = cryptoJson[3].img;
-    document.getElementById('span-ada').textContent = cryptoJson[3].abbr;
-    document.querySelector('.ada-highlight-value').textContent = cryptoJson[3].value;
-    document.querySelector('.ada-highlight-mkt').textContent = moneyFormat(cryptoJson[3].mkt);
+    document.getElementById('span-ada').textContent = data.data[4].symbol
+    document.querySelector('.ada-highlight-value').textContent = moneyFormat(data.data[4].priceUsd)
+    document.querySelector('.ada-highlight-mkt').textContent = moneyFormat(data.data[4].priceUsd)
 
     //XPRR
     document.getElementById('ape-img').src = cryptoJson[6].img;
-    document.getElementById('span-ape').textContent = cryptoJson[6].abbr;
-    document.querySelector('.ape-highlight-value').textContent = cryptoJson[6].value;
-    document.querySelector('.ape-highlight-mkt').textContent = moneyFormat(cryptoJson[6].mkt);
+    document.getElementById('span-ape').textContent = data.data[5].symbol
+    document.querySelector('.ape-highlight-value').textContent = moneyFormat(data.data[5].priceUsd)
+    document.querySelector('.ape-highlight-mkt').textContent = moneyFormat(data.data[5].supply)
 };
 newListing();
 
@@ -84,54 +136,10 @@ const topVolumeCoin = () => {
 };
 topVolumeCoin();
 
+                }
 
-
-
-const criptoAPI = async() => {
-    try {
-        const rsp = await fetch('https://api.coincap.io/v2/assets')
-        console.log(rsp);
-
-        if(rsp.status === 200) {
-            const data = await rsp.json();
-            console.log(data);
-//             asset_id: "USD"
-// data_end: "2022-07-10"
-// data_orderbook_end: "2022-07-10T00:00:00.0000000Z"
-// data_orderbook_start: "2014-02-24T17:43:05.0000000Z"
-// data_quote_end: "2022-07-10T00:00:00.0000000Z"
-// data_quote_start: "2014-02-24T17:43:05.0000000Z"
-// data_start: "2010-07-17"
-// data_symbols_count: 123348
-// data_trade_end: "2022-07-10T00:00:00.0000000Z"
-// data_trade_start: "2010-07-17T23:09:17.0000000Z"
-// id_icon: "0a4185f2-1a03-4a7c-b866-ba7076d8c73b"
-// name: "US Dollar"
-// type_is_crypto: 0
-// volume_1day_usd: 14880810299575.45
-// volume_1hrs_usd: 546088866134.67
-// volume_1mth_usd: 640403318621349.6
-
-            let cryptos = []
-            data.data.forEach(item => {
-                // console.log(item.response)
-                cryptos += `
-                    <div class="columns is-flex border-bottom is-mobile">
-                            <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
-                            align-items-center is-flex-direction-column is-hidden-mobile"><img src=""></span>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex">
-                        ${item.symbol}
-                        <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
-                        align-items-center is-flex-direction-column is-hidden-mobile">${item.name}</span>
-                        </div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${moneyFormat(item.priceUsd)}</div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.changePercent24Hr}</div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volumeUsd24Hr}</div>
-                    </div>
-                `
-            });
-            let testing = document.getElementById('testing')
-            testing.innerHTML = cryptos;
+            }
+            marketTopNavbar();
 
         } else if (rsp === 401){
             console.log('Error 401');

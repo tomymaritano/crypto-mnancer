@@ -14,84 +14,82 @@
   </head>
   <body>
     <nav
-      id="navbar"
-      class="navbar is-transparent has-shadow"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
-          <img src="img/logo.png" width="120" height="40" />
-        </a>
+    id="navbar"
+    class="navbar is-transparent"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="img/logo.png" width="120" height="40" />
+      </a>
 
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="buycrypto.html" class="navbar-item"> Buy crypto </a>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="buycrypto.html" class="navbar-item"> Buy crypto </a>
 
-          <a href="market.html" class="navbar-item"> Markets </a>
+        <a href="market.html" class="navbar-item"> Markets </a>
 
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> Trade </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"> Trade </a>
 
-            <div class="navbar-dropdown">
-              <a class="navbar-item"> Binance Convert </a>
-              <a class="navbar-item"> Spot </a>
-              <a class="navbar-item"> Margin </a>
-              <hr class="navbar-divider" />
-              <a class="navbar-item"> Report an issue </a>
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> Derivatives </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item"> Binance Futures Overview </a>
-              <a class="navbar-item"> Responsible trading </a>
-              <a class="navbar-item"> USD M-Futures </a>
-              <a class="navbar-item"> Report an issue </a>
-            </div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item"> Binance Convert </a>
+            <a class="navbar-item"> Spot </a>
+            <a class="navbar-item"> Margin </a>
+            <hr class="navbar-divider" />
+            <a class="navbar-item"> Report an issue </a>
           </div>
         </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"> Derivatives </a>
 
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a href="signup.html" class="button is-small is-warning">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-small"> Log in </a>
-              <hr />
-            </div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item"> Binance Futures Overview </a>
+            <a class="navbar-item"> Responsible trading </a>
+            <a class="navbar-item"> USD M-Futures </a>
+            <a class="navbar-item"> Report an issue </a>
           </div>
-          <div class="navbar-item">
-            <a class="navbar-item"> English </a>
-            <a id="dolar" class="navbar-item"> USD </a>
-            <a class="navbar-item js-modal-trigger" id="historial" data-target="modal-js-example"><i class="fa-solid fa-store"></i></a>
-            <a href="wallet.html" class="navbar-item"><i class="fa-solid fa-wallet"></i></a>
-            <a class="navbar-item">
-              <i class="fa-solid fa-moon"></i>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="signup.html" class="button is-small is-warning">
+              <strong>Sign up</strong>
             </a>
+            <a class="button is-small"> Log in </a>
+            <hr />
           </div>
         </div>
+        <div class="navbar-item">
+          <a class="navbar-item"> English </a>
+          <a class="navbar-item"> USD </a>
+          <a id="color-toggle" class="navbar-item">
+            <i class="fa-solid fa-moon"></i>
+        </a>
+        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <!--Section-->
 
-    <section class="section has-background-light">
+    <section id="deposit-fiat" class="section has-background-light">
       <div class="container">
         <h2 class="subtitle is-4">Deposit Fiat</h2>
       </div>
@@ -173,9 +171,9 @@
               </div>
             </div>
             </form>
-            <div class="column ">
-              <div class="content has-text-centered">
-              <div id="chart-crypto" class="is-hidden-mobile"></div>  
+            <div class="column is-flex is-justify-content-end is-align-items-center">
+              <div class="content">
+                <iframe width="500" height="400" src="https://embed.lottiefiles.com/animation/103226"></iframe>
               </div>              
           </div>
         </div>
@@ -299,7 +297,7 @@
       </div>
     </div>
   </body>
-
+  <script src="js/functions.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js" integrity="sha512-yhdujT21BI/kqk9gcupTh4jMwqLhb+gc6Ytgs4cL0BJjXW+Jo9QyllqLbuluI0cBHqV4XsR7US3lemEGjogQ0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/chart_crypto.js"></script>
   <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
@@ -309,7 +307,6 @@
     crossorigin="anonymous"
   ></script>
    <script src="js/modal.js"></script>
-  <script src="js/functions.js"></script>
   <script src="js/arrays_criptos.js"></script>
   <script src="js/main.js"></script>
 </html>

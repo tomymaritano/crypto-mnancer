@@ -3,7 +3,7 @@ var options = {
       type: 'bar'
     },
     series: [{
-      name: 'sales',
+      name: 'Bitcoin', 
       data: [30,40,45,50,49,60,70,91,125]
     }],
     xaxis: {

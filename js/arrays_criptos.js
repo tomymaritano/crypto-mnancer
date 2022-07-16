@@ -314,6 +314,7 @@ const moneyFormat = (price, sign = '$') => {
   return sign + pieces.join('')
 };
 
+
 //IMG PUSHING
 let imgString = [];
 // console.log(imgString);
