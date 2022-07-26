@@ -13,6 +13,8 @@ const criptoAPI = async() => {
 
             let cryptos = []
             data.data.forEach(item => {
+                let s = Math.round(item.supply * 100) / 100;
+                let p = Math.round(item.changePercent24Hr * 200) / 200;
                 // console.log(item.response)
                 cryptos += `
                     <div class="columns is-flex border-bottom is-mobile">
@@ -23,9 +25,9 @@ const criptoAPI = async() => {
                         <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
                         align-items-center is-flex-direction-column is-hidden-mobile">${item.name}</span>
                         </div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 "><strong>${moneyFormat(item.priceUsd)}</strong></div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${item.changePercent24Hr}</div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${item.volumeUsd24Hr}</div>
+                        <div id="priceID" class="column list-negative-afirmative is-mobile is-size-6 "><strong>${moneyFormat(item.priceUsd)}</strong></div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${p}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${s}</div>
                     </div>
                 `
             });
@@ -36,6 +38,7 @@ const criptoAPI = async() => {
                 let navbar = document.getElementById('top-nav-market');
                 for (const i of data.data) {
                     // console.log(i.id)
+                    
                     if (i.rank === '70') {
                         let add = `        
                         <div class="content">
