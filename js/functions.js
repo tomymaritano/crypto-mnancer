@@ -41,9 +41,6 @@ const moneyComparative = (x) => {
 
 //DARKMODE
 const toggleEvent = () => {
-  let x = document.getElementById('color-toggle').addEventListener('click', () => changeToggle())
-  console.log(x)
-  let c = x
-  let z = localStorage.setItem(c, 'darkMode');
+    document.getElementById('color-toggle').addEventListener('click', () => changeToggle())
 };
 toggleEvent();

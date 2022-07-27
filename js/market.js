@@ -1,7 +1,3 @@
-
-
-
-
 const criptoAPI = async() => {
     try {
         const rsp = await fetch('https://api.coincap.io/v2/assets')
@@ -13,6 +9,12 @@ const criptoAPI = async() => {
 
             let arrayCopy = [...data.data];
             console.log(arrayCopy)
+            arrayCopy.sort((a,b) => {
+                if(a < b) return 1;
+                if(a > b) return -1;
+                return 0;
+            });
+            console.log(arrayCopy)
 
             let cryptos = []
             data.data.forEach(item => {
@@ -23,7 +25,7 @@ const criptoAPI = async() => {
                 cryptos += `
                     <div class="columns is-flex border-bottom is-mobile">
                             <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
-                            align-items-center is-flex-direction-column is-hidden-mobile"><img src=""></span>
+                            align-items-center is-flex-direction-column is-hidden-mobile"><img src="../img/icons/btc.svg"></span>
                         <div class="column list-negative-afirmative is-mobile is-size-6 is-flex">
                         ${item.symbol}
                         <span class="pl-3 is-size-7 has-text-dark has-text-weight-light addingImg is-flex is-vcentered is-justify-content-center is
@@ -60,15 +62,12 @@ const criptoAPI = async() => {
                         console.log(navbar);
                         navbar.innerHTML = add;
                     }else{}
-
-
-
-                    //UPMENU
-        const reduce = (z,x,c) => {
-            let d = document.querySelector(z)
-            let _d = JSON.parse(data.data[x].supply);
-            d.textContent = _d.toFixed(c);    
-        }; 
+//UPMENU
+const reduce = (z,x,c) => {
+    let d = document.querySelector(z)
+    let _d = JSON.parse(data.data[x].supply);
+        d.textContent = _d.toFixed(c);   
+}; 
 
 const highlight = () => {
 

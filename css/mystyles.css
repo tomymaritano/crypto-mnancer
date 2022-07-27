@@ -8021,12 +8021,24 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   .dark-mode i {
     color: white; }
   .dark-mode nav {
-    background-color: #181A1F;
+    background-color: #181A1F !important;
     color: white; }
   .dark-mode nav > a {
-    color: white !important; }
+    color: white !important;
+    background-color: #181A1F !important; }
+  .dark-mode a {
+    background-color: #181A1F !important; }
   .dark-mode #navbarBasicExample > a {
-    color: white !important; }
+    color: white !important;
+    background-color: #181A1F !important; }
+  .dark-mode .navbar-item {
+    background-color: #181A1F !important; }
+  .dark-mode .navbar-link {
+    color: white; }
+  .dark-mode .nav-sign {
+    background-color: yellow !important; }
+  .dark-mode .button {
+    background-color: #FFE089 !important; }
   .dark-mode span {
     color: white !important; }
   .dark-mode strong {

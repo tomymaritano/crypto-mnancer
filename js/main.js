@@ -63,17 +63,22 @@ const inputNumber = (e) => {
 
               // const sellFunction = () => {}
               let date = JSON.stringify(new Date());
+              console.log(date)
               let idNumber = JSON.parse(Math.floor((Math.random() * 1000) + 1))
+              console.log(idNumber)
               let transactionParse = JSON.parse(engineFunction());
-              // console.log(transactionParse);
+              console.log(transactionParse);
 
-              const tResultLocal = (a, b) => { return a, b };
-              tResultLocal(date, transactionParse);
-
-              console.log(tResultLocal)
+              const tResultLocal = (a, b, c) => { return console.log(a, b, c) };
+              tResultLocal(date, transactionParse, selectCrypto.value);
 
               
               let tResult = transactionFunction(`Date : ${date} / ${selectCrypto.value} = ${transactionParse} - TRANSACTION NUMBER ${idNumber}`);
+              let testing = JSON.stringify(tResult);
+              console.log(testing)
+              let testingOne = localStorage.setItem('testing', tResultLocal(date,transactionParse,selectCrypto.value));
+              testingOne;
+              console.log(typeof testing);
               transactionHistory.appendChild(tResult);
             } else if (valueAmmount == false) {
               Swal.fire(
