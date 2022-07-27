@@ -11,10 +11,14 @@ const criptoAPI = async() => {
             const data = await rsp.json();
             console.log(data);
 
+            let arrayCopy = [...data.data];
+            console.log(arrayCopy)
+
             let cryptos = []
             data.data.forEach(item => {
                 let s = Math.round(item.supply * 100) / 100;
                 let p = Math.round(item.changePercent24Hr * 200) / 200;
+                let v = Math.round(item.vwap24Hr * 100) / 100;
                 // console.log(item.response)
                 cryptos += `
                     <div class="columns is-flex border-bottom is-mobile">
@@ -27,7 +31,8 @@ const criptoAPI = async() => {
                         </div>
                         <div id="priceID" class="column list-negative-afirmative is-mobile is-size-6 "><strong>${moneyFormat(item.priceUsd)}</strong></div>
                         <div class="column list-negative-afirmative is-mobile is-size-6 ">${p}</div>
-                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end">${s}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 ">${v}</div>
+                        <div class="column list-negative-afirmative is-mobile is-size-6 is-flex is-justify-content-end is-hidden-mobile">${s}</div>
                     </div>
                 `
             });
@@ -38,14 +43,17 @@ const criptoAPI = async() => {
                 let navbar = document.getElementById('top-nav-market');
                 for (const i of data.data) {
                     // console.log(i.id)
+                    let s = Math.round(i.supply * 100) / 100;
+                    let p = Math.round(i.changePercent24Hr * 200) / 200;
+                    let v = Math.round(i.vwap24Hr * 100) / 100;
                     
                     if (i.rank === '70') {
                         let add = `        
                         <div class="content">
                         <div class="columns is-flex-direction-row m-2">
                           <div class="column is-flex"><span class="pr-4"><strong>${i.name}</strong></span><p class="pr-2">Price</p><span class="span"><strong>${moneyFormat(i.priceUsd)}</strong></span></div>
-                          <div class="column is-flex"><p class="pr-2">Exchange</p><span class="span percent"><strong>${moneyComparative(i.changePercent24Hr)}</strong></span></div>
-                          <div class="column is-flex"><p class="pr-2">Supply</p><span class="span"><strong>${i.supply}</strong></span></div>
+                          <div class="column is-flex"><p class="pr-2">Exchange</p><span class="span percent"><strong>${moneyComparative(p)}</strong></span></div>
+                          <div class="column is-flex"><p class="pr-2">Supply</p><span class="span"><strong>${s}</strong></span></div>
                           <div class="column is-flex"><p class="pr-2">Rank</p><span><strong>${i.rank}</strong></span></div>            
                         </div>
                       </div>`
