@@ -22,6 +22,7 @@ const changeToggle = () => {
   x.classList.toggle('dark-mode');
 };
 
+
 const changeIcon = () => {
   let x = document.getElementById('fa-moon')
   x.classList.remove('fa-moon');
@@ -40,7 +41,21 @@ const moneyComparative = (x) => {
 };
 
 //DARKMODE
-const toggleEvent = () => {
-    document.getElementById('color-toggle').addEventListener('click', () => changeToggle())
+const darkModeOnOff = () => {
+  let darkMode = localStorage.getItem('darkMode')
+  console.log(darkMode)
+  const toggleEvent = () => {
+      let x = document.getElementById('color-toggle')
+      x.addEventListener('click', () => changeToggle())
+      let z = localStorage.setItem('darkMode', 'enable');
+  };
+  const toogleEventDisable = () => {
+      let x = document.getElementById('color-toggle')
+      let z = localStorage.setItem('darkMode', null);
+  }
+  
+  const darkModeAD = () => { toggleEvent() === true ? toogleEvent() : toogleEventDisable() };
+  
+  darkModeAD();
 };
-toggleEvent();
+darkModeOnOff();
