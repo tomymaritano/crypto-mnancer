@@ -1,17 +1,4 @@
-//Get started email
-const emailStarted = (email) => {
-    email = document.getElementById('emailStarted').value;
-    alert('tu email es' + ' ' + email)
-};
-
-const buttonEmail = () => {
-        document.getElementById('emailStartedButton').addEventListener('click', () => {emailStarted()});
-}
-
-buttonEmail();
-
-
-const criptoAPI = async() => {
+const indexAPI = async() => {
     try {
         const rsp = await fetch('https://api.coincap.io/v2/assets')
         console.log(rsp);
@@ -297,4 +284,17 @@ console.log(error);
 };
 };
 
-criptoAPI();
+indexAPI();
+
+//Get started email
+const emailStarted = (email) => {
+    email = document.getElementById('emailStarted').value;
+    alert('tu email es' + ' ' + email)
+};
+
+const buttonEmail = () => {
+        document.getElementById('emailStartedButton').addEventListener('click', () => {emailStarted()});
+}
+
+buttonEmail();
+
