@@ -1,11 +1,14 @@
 const criptoAPI2 = async() => {
     try {
-        const rsp = await fetch('https://api.coincap.io/v2/assets')
+        const rsp = await fetch('https://rest.coinapi.io/v1/assets?apikey=F49623C9-A3F7-4CDA-9749-D02D2FF35840')
         console.log(rsp);
 
         if(rsp.status === 200) {
             const data = await rsp.json();
-            console.log(data);
+
+            let copyArray = [...data]
+            let sliceCopyArray = copyArray.slice(0,100);
+            console.log(sliceCopyArray)
 
             const form = document.getElementById("form");
             form.onsubmit = (e) => {
@@ -24,7 +27,7 @@ const criptoAPI2 = async() => {
                   //Engine function and parseFloat function with toFixed() to get 3 decimals;
                   const engineFunction = () => {
                     
-                    for (const item of data.data) {
+                    for (const item of sliceCopyArray) {
                       if (item.name === selectedCrypto) {
                         return taxes(valueAmmount, iva(valueAmmount), item.priceUsd);
                       } else {}
@@ -91,7 +94,7 @@ const criptoAPI2 = async() => {
             //Adding All cryptos to options
             const listElements = document.getElementById("selectedCrypto");
             const addingListArray = () => {
-              for (const item of data.data) {
+              for (const item of sliceCopyArray) {
                 let element = document.createElement("option");
                 element.textContent = `${item.name}`;
                 listElements.appendChild(element);
