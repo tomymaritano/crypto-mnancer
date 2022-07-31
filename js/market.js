@@ -16,7 +16,7 @@ const criptoAPI = async() => {
             // });
             // console.log(arrayCopy)
 
-            let sliceX = data.slice(0, 99);
+            let sliceX = data.slice(0, 30);
             let sliceZ = data.slice(100, 199);
             let sliceC = data.slice(200, 299);
             let sliceV = data.slice(300, 399);
@@ -28,7 +28,7 @@ const criptoAPI = async() => {
             let sliceD = data.slice(900, 999);
 
             let cryptos = []
-            sliceX.forEach(item => {
+            data.forEach(item => {
                 let s = Math.round(item.volume_1day_usd * 100) / 100;
                 let p = Math.round(item.volume_1hrs_usd * 200) / 200;
                 let v = Math.round(item.volume_1mth_usd * 100) / 100;
