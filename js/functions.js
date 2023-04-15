@@ -12,9 +12,7 @@ const sepa = (x) => {
   x--; 
 };
 
-const visaFee = (x) => {
-  return x * 0.18;
-};
+const visaFee = (x) => { x * 0.18;};
 
 const changeToggle = () => {
   let x = document.body
