@@ -13,7 +13,7 @@ const sepa = (x) => {
 };
 
 const visaFee = (x) => {
-  x * 0.18;
+  return x * 0.18;
 };
 
 const changeToggle = () => {
@@ -40,7 +40,7 @@ const moneyComparative = (x) => {
   }
 };
 
-//DARKMODE
+//DARKMODE save it on a JSON ?????
 const darkModeOnOff = () => {
   let darkMode = localStorage.getItem('darkMode')
   console.log(darkMode)
